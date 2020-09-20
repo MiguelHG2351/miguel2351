@@ -20,12 +20,14 @@ export default css`
         text-decoration: none;
         display: block;
         margin: 22px 0;
+        border-radius: 8px;
     }
 
     .principal {
         cursor: pointer;
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 3px #000;
     }
 
     .project-name {
@@ -36,6 +38,7 @@ export default css`
         background-color: rgba(0, 0, 0, 0.8);
         transform: scale(0.9);
         transition: all ease 0.45s;
+        box-shadow: 0 0 3px #000;
     }
 
     .tech, .project-name {
