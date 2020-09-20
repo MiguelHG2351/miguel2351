@@ -16,14 +16,35 @@ export default css`
         z-index: 2;
     }
 
+    .card {
+        text-decoration: none;
+        display: block;
+        margin: 22px 0;
+    }
+
     .principal {
         cursor: pointer;
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.4);
     }
 
-    .tech, .project {
+    .project-name {
+        display: flex;
+    }
+
+    .principal:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        transform: scale(0.9);
+        transition: all ease 0.45s;
+    }
+
+    .tech, .project-name {
         color: #fff;
+        user-select: none;
+    }
+
+    .project-name > p {
+        margin-left: 5px;
     }
 /* 
     .principal {
