@@ -50,5 +50,8 @@ export default css.global`
         #icon-wrapper {
           display: none;
         }
+        .relative {
+          position: relative;
+        }
 
 `
