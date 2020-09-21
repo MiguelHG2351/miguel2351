@@ -73,6 +73,16 @@ export default css`
         justify-content: center;
     }
 
+    .iframe-container {
+        margin: 35px 0;
+    }
+
+    iframe {
+        max-width: 100%;
+        margin: auto;
+        height: 200px;
+    }
+
     @media screen and (min-width: 363px) {
         .principal {
             height: 350px;

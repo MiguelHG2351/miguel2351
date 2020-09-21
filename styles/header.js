@@ -29,6 +29,11 @@ export default css`
         font-size: 1.5em;
     }
 
+    .name a {
+        color: #000;
+        text-decoration: none;
+    }
+
     .sidenav {
         position: fixed;
         top: 0;

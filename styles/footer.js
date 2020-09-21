@@ -48,5 +48,21 @@ export default css`
     .social-media a img {
         vertical-align: bottom;
     }
+
+    .iframe-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            object-fit: cover;
+            width: 100%;
+        }
+
+@media screen and (min-width: 996px) {
+    iframe {
+            width: 600px;
+        }
+}
     
 `;

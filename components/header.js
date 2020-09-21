@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState, useRef } from 'react'
 import styles from '../styles/header'
 
@@ -25,7 +26,11 @@ export default function Header() {
                 </button>
             </div>
             <div className="name">
-                <h3>Miguel2351</h3>
+                <h3>
+                    <Link href="/">
+                        <a>Miguel2351</a>
+                    </Link>
+                </h3>
             </div>
             <div className={menu}>
                 <div className="user">
