@@ -39,7 +39,8 @@ export default css`
         background-color: #fff;
         /* width: 80%; */
         overflow: hidden;
-        transition: all ease 0.75s;
+        transition: width ease 0.75s;
+        height: 100%;
         width: 0;
     }
 

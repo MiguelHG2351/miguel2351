@@ -67,6 +67,26 @@ export default css`
         bottom: 0;
         z-index: -1;
         overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 363px) {
+        .principal {
+            height: 350px;
+        }
+    }
+
+    @media screen and (min-width: 996px) {
+        .project {
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 50px;
+        }
     }
 
 `

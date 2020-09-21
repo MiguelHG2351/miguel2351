@@ -3,6 +3,9 @@ import css from "styled-jsx/css";
 export default css.global`
     :root {
         --shadow-ligth: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
+        --primary: #009cf7;
+        --warning: #ffd900;
+        --secondary: #00fe00;
     }
     * {
         margin: 0;
@@ -52,6 +55,18 @@ export default css.global`
     }
     .relative {
         position: relative;
+    }
+
+    .primary {
+        background-color: var(--primary);
+    }
+
+    .secondary {
+        background-color: var(--secondary);
+    }
+
+    .warning {
+        background-color: var(--warning);
     }
 
     .blue-filter {

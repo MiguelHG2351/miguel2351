@@ -28,7 +28,7 @@ export default function Index() {
                                 <p>ReactJS, NodeJS, MongoDB, Firebase</p>
                             </div>
                         </div>
-                        <div className="background">
+                        <div className="background primary">
                             <img src="/images/tech2.png" className="responsive-img" alt="Logo de proyectos principales con HTML, CSS y JS"/>
                         </div>
                     </div>
@@ -47,7 +47,7 @@ export default function Index() {
                                 <p>Express, NodeJS, MongoDB, Webpack</p>
                             </div>
                         </div>
-                        <div className="background">
+                        <div className="background warning">
                             <img src="/images/tech3-1.png" className="responsive-img" alt="Logo de proyectos principales con HTML, CSS y JS"/>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ export default function Index() {
                                 <p>GraphQL, NodeJS, MongoDB, Webpack</p>
                             </div>
                         </div>
-                        <div className="background">
+                        <div className="background secondary">
                             <img src="/images/tech4-1.png" className="responsive-img" alt="Logo de proyectos principales con HTML, CSS y JS"/>
                         </div>
                     </div>
