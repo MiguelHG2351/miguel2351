@@ -1,5 +1,6 @@
 import Layout from  "../components/Layout"
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 import App from 'next/app'
 import Head from 'next/head'
@@ -16,6 +17,7 @@ class MyApp extends App {
             </Head>
             <Header />
             <Component {...pageProps} />
+            <Footer />
         </Layout>
 </>
     }

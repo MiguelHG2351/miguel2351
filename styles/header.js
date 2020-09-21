@@ -31,7 +31,6 @@ export default css`
 
     .sidenav {
         position: fixed;
-        display: none;
         top: 0;
         left: 0;
         right: 0;

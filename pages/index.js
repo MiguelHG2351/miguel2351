@@ -6,7 +6,7 @@ export default function Index() {
     return <>
     <Head>
         <meta name="description" content="Página principal Miguel2351"/>
-        <title>Home</title>
+        <title>Miguel2351 | Miguel Hernández Gaitan</title>
         <link rel="icon" href="/images/favicon.ico"/>
     </Head>
     <section className="description">
@@ -16,7 +16,7 @@ export default function Index() {
         </header>
         <article className="project">
             <Link href="/about">
-                <a className="card">
+                <a className="card blue-filter">
                     <div className="principal relative">
                         <div className="info">
                             <div className="project-name">
@@ -35,7 +35,7 @@ export default function Index() {
                 </a>
             </Link>
             <Link href="/about">
-                <a className="card">
+                <a className="card yellow-filter">
                     <div className="principal relative">
                         <div className="info">
                             <div className="project-name">
@@ -54,7 +54,7 @@ export default function Index() {
                 </a>
             </Link>
             <Link href="/graphql">
-                <a className="card">
+                <a className="card green-filter">
                     <div className="principal relative">
                         <div className="info">
                             <div className="project-name">

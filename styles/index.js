@@ -19,7 +19,8 @@ export default css`
     .card {
         text-decoration: none;
         display: block;
-        margin: 22px 0;
+        margin: 52px 0;
+        border: none;
         border-radius: 8px;
     }
 
