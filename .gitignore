@@ -2,3 +2,4 @@ node_modules
 .next
 respaldo.psd
 respaldo2.psd
+.prettierrc
