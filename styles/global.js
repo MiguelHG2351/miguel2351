@@ -29,6 +29,10 @@ export default css.global`
         margin-bottom: 10px;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     .btn {
         border: none;
         outline: none;

@@ -83,20 +83,21 @@ export default css`
         width: 30%;
     }
 
-    .menu li {
+    .list-menu a {
         padding: 12px 8px;
-        transition: all ease 0.25s;
         display: flex;
+        transition: all ease 0.25s;
         align-items: center;
+        color: #000;
         font-size: 14px;
     }
 
-    .menu li:hover {
+    .list-menu a:hover {
         background: rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
 
-    .menu li i {
+    .list-menu a i {
         margin-right: 12px;
         font-size: 18px;
     }
