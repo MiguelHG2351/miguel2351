@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
-import Card from "../components/Card";
-import styles from "../styles/";
+import Card from "components/Card";
+import styles from "styles/";
 
 export default function Index() {
     return (
@@ -13,6 +12,7 @@ export default function Index() {
                 />
                 <title>Miguel2351 | Miguel Hernández Gaitan</title>
                 <link rel="icon" href="/images/favicon.ico" />
+                <meta name="theme-color" content="#09f" />
             </Head>
             <section className="description">
                 <header className="profile-me">

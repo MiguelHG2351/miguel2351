@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { styles } from '../styles/card'
+import { styles } from 'styles/card'
 
 
 export default function Card({ proyect, technologies, image, alt, url, color = null }) {

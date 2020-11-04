@@ -1,10 +1,34 @@
 import Link from "next/link";
-import { useState, useRef } from "react";
-import styles from "../styles/header";
+import { useState, useRef, useEffect } from "react";
+import styles from "styles/header";
 
 export default function Header() {
+
+    const [theme, setTheme] = useState(null);
+
     const [menu, setMenu] = useState("sidenav");
+
     const ref = useRef("overlay");
+
+    function changeTheme(e) {
+
+        console.log(e.currentTarget)
+
+        console.log(this)
+        if(theme == "dark") {
+            setTheme('light')
+        } else {
+            setTheme('dark')
+        }
+    }
+
+    useEffect(() => {
+        let theme_default = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        setTheme(theme_default)
+        
+    }, [])
+
+    /* Events */
 
     function openMenu() {
         ref.current.classList.add("active");
@@ -30,7 +54,15 @@ export default function Header() {
                             <a>Miguel2351</a>
                         </Link>
                     </h3>
+                    <div className="options-user">
+                        <button className={`btn-set-mode ${theme}`} onClick={changeTheme}>
+                            <i className="material-icons">bedtime</i>
+                            <i className="material-icons">brightness_7</i>
+                        </button>
+                    </div>
                 </div>
+                
+
                 <div className={menu}>
                     <div className="user">
                         <div className="profile">
@@ -95,9 +127,6 @@ export default function Header() {
                                     Contact
                                 </a>
                             </Link>
-                        </li>
-                        <li className="list-menu">
-                            Dark Mode (proximamente)
                         </li>
                     </ul>
                 </div>

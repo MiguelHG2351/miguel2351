@@ -1,6 +1,9 @@
 import css from 'styled-jsx/css'
 
 export default css`
+
+    /* Header site, global  */
+
     .header-site {
         box-shadow: var(--shadow-ligth);
         padding: 12px;
@@ -29,10 +32,88 @@ export default css`
         font-size: 1.5em;
     }
 
+    .name {
+        position: relative;
+    }
+
     .name a {
         color: #000;
         text-decoration: none;
     }
+
+    .options-user {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 12px;
+        z-index: 2;
+        background-color: #09f;
+        left: 0;
+        right: 0;
+        height: 150px;
+        background-color: #fff;
+        box-shadow: var(--shadow-ligth);
+    }
+
+    .btn-set-mode {
+        padding: 14px 6px;
+        position: relative;
+        border: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 15px;
+        outline: none;
+        cursor: pointer;
+        transition: transform 0.2s ease-in;
+    }
+    
+    .btn-set-mode:hover {
+        transform: scale(0.9);
+    }
+
+    .btn-set-mode:hover::after {
+        padding: 16px;
+        top: 8.2px;
+        left: 6px;
+        position: absolute;
+        z-index: 5;
+    }
+
+    .btn-set-mode::after {
+        transition: all 0.2s ease-in;
+        content: '';
+        padding: 18px;
+        top: 8px;
+        left: 8px;
+        position: absolute;
+        background-color: #fff;
+        z-index: 5;
+        border-radius: 50%;
+    }
+
+    @media screen and (prefers-color-scheme: ligth) {
+
+        .btn-set-mode {
+            box-shadow: var(--shadow-ligth);
+            background-color: #fff;
+        }
+
+    }
+
+    @media screen and (prefers-color-scheme: dark) {
+
+        .btn-set-mode {
+            background-color: #ff0;
+            box-shadow: var(--shadow-ligth);
+        }
+
+    }
+
+
+    /* Sidenav, reponsive design */
 
     .sidenav {
         position: fixed;
@@ -42,7 +123,6 @@ export default css`
         bottom: 0;
         z-index: 10;
         background-color: #fff;
-        /* width: 80%; */
         overflow: hidden;
         transition: width ease 0.75s;
         height: 100%;
@@ -101,6 +181,8 @@ export default css`
         margin-right: 12px;
         font-size: 18px;
     }
+
+    /* Overlay the menu */
 
     .overlay {
         position: fixed;
