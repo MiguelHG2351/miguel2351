@@ -14,8 +14,12 @@
   "license": "ISC",
   "dependencies": {
     "next": "^10.0.0",
+    "next-redux-wrapper": "^6.0.2",
     "react": "^17.0.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
     "styled-jsx": "^3.3.0"
   }
 }
