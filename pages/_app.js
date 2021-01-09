@@ -6,7 +6,6 @@ import Layout from "components/Layout/Layout";
 import Header from "components/header";
 import Footer from "components/footer";
 
-
 function MyApp({Component, pageProps}) {
 
     const store = useStore(pageProps.initialReduxState)
