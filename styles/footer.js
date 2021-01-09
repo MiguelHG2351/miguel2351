@@ -45,10 +45,12 @@ export default css`
 
     .social-media a {
         color: #2669cd;
+        width: 48px;
+        height: 48px;
+        text-align: center
     }
 
     .social-media a i {
-        margin-top: 18px;
         font-size: 32px;
     }
 

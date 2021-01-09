@@ -89,8 +89,8 @@ export default function Header() {
                                         loading="lazy"
                                     />
                                 </div>
-                                <a className="info">Miguel2351</a>
-                                <a className="info">
+                                <a className="info" href="https://github.com/MiguelHG2351">Miguel2351</a>
+                                <a className="info" href="mailto:miguelhernandezgaitan13@gmail.com">
                                     miguelhernandezgaitan13@gmail.com
                                 </a>
                             </div>
