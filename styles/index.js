@@ -6,6 +6,23 @@ export default css`
         text-align: center;
         width: 90%;
         margin: auto;
+        color: #eee;
+        animation-name: fade-in;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-fill-mode: both;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(42px) scale(0.9);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
     }
 
     .profile-me h1 {

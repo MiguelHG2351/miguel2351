@@ -1,30 +1,33 @@
-import css from 'styled-jsx/css'
+import css from "styled-jsx/css";
 
 export const styles = css`
-
-.card {
+    .card {
         text-decoration: none;
         display: block;
         margin: 52px 0;
         border: none;
         border-radius: 8px;
-}
+        transition: all ease 0.18s;
+    }
 
-.principal {
+    .principal {
         cursor: pointer;
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.4);
         box-shadow: 0 0 3px #000;
-}
-
-.principal:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        transform: scale(0.9);
         transition: all ease 0.45s;
-        box-shadow: 0 0 3px #000;
-}
+    }
 
-.background {
+    .card:hover {
+        transform: scale(0.9);
+    }
+
+    .card:hover .principal {
+        background-color: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 3px #000;
+    }
+
+    .background {
         position: absolute;
         top: 0;
         left: 0;
@@ -36,25 +39,25 @@ export const styles = css`
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-}
+    }
 
-.project-name {
+    .project-name {
         display: flex;
-}
+    }
 
-.tech, .project-name {
+    .tech,
+    .project-name {
         color: #fff;
         user-select: none;
-}
+    }
 
     .project-name > p {
         margin-left: 5px;
-}
+    }
 
-@media screen and (min-width: 363px) {
+    @media screen and (min-width: 363px) {
         .principal {
             height: 350px;
         }
-}
-
-`
+    }
+`;

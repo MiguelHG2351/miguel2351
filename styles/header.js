@@ -7,6 +7,7 @@ export default css`
     .header-site {
         box-shadow: var(--shadow-ligth);
         padding: 12px;
+        background-color: rgb(33 30 43);
     }
 
     .container-header {
@@ -23,7 +24,7 @@ export default css`
     }
 
     .nav-button button {
-        color: #000;
+        color: #fff;
         background-color: transparent;
         font-size: 18px;
     }
@@ -37,7 +38,7 @@ export default css`
     }
 
     .name a {
-        color: #000;
+        color: #eee;
         text-decoration: none;
     }
 
@@ -127,11 +128,16 @@ export default css`
         transition: width ease 0.75s;
         height: 100%;
         width: 0;
+        overflow-y: auto;
     }
 
     .sidenav.active {
         display: block;
         width: 80%;
+    }
+
+    .sidenav::-webkit-scrollbar {
+        width: 0px;
     }
 
     .profile {

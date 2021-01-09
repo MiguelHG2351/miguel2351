@@ -3,14 +3,21 @@ import css from "styled-jsx/css";
 export default css`
     .footer {
         box-shadow: var(--shadow-ligth);
-        background-image: url(/images/background-footer.png);
+        /* background-image: url(/images/background-footer.png); */
+        background-color: #03091e;
         background-repeat: no-repeat;
         background-size: cover;
     }
 
+    .footer-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+    }
+
     .section-footer-container {
         width: 90%;
-        margin: auto;
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 50% 50%;
         justify-content: center;
