@@ -74,9 +74,10 @@ export default function Header() {
                         <div className="profile">
                             <div className="background">
                                 <img
-                                    src="/images/background.jpeg"
+                                    src="/images/background.webp"
                                     className="responsive-img"
                                     alt="Imagen del fondo del usuario"
+                                    loading="lazy"
                                 />
                             </div>
                             <div className="user-info">

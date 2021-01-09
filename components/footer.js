@@ -44,7 +44,7 @@ export default function Footer() {
                         <a href="mailto:miguelhernandezgaitan13@gmail.com" title="Enviar email"><i className="material-icons">email</i></a>
                     </div>
                     <div className="img-footer">
-                        <img src="/images/logo-no-background.png" className="responsive-img" style={{verticalAlign: 'bottom'}} alt="Logo del sitio web"/>
+                        <img src="/images/logo-no-background.png" loading="lazy" className="responsive-img" style={{verticalAlign: 'bottom'}} alt="Logo del sitio web"/>
                     </div>
                 </div>
             </footer>

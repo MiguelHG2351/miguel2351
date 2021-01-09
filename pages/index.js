@@ -24,7 +24,7 @@ export default function Index() {
                     <Card
                         proyect="ReactJS"
                         technologies="ReactJS, NodeJS, MongoDB, Firebase"
-                        image="/images/tech2.png"
+                        image="/images/tech2.webp"
                         alt="Logo de proyectos principales con ReactJS, NodeJS, MongoDB, Firebase"
                         url="/reactjs/"
                         color="primary"
@@ -32,7 +32,7 @@ export default function Index() {
                     <Card
                         proyect="CRUD"
                         technologies="Express, NodeJS, MongoDB, Webpack"
-                        image="/images/tech3-1.png"
+                        image="/images/tech3-1.webp"
                         alt="Logo de proyectos principales con Express, NodeJS, MongoDB, Webpack"
                         url="/crud/"
                         color="warning"
@@ -40,7 +40,7 @@ export default function Index() {
                     <Card
                         proyect="GraphQL"
                         technologies="GraphQL, NodeJS, MongoDB, Webpack"
-                        image="/images/tech4-1.png"
+                        image="/images/tech4-1.webp"
                         alt="Logo de proyectos principales GraphQL, NodeJS, MongoDB, Webpack"
                         url="/graphql/"
                         color="secondary"
