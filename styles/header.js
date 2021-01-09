@@ -152,6 +152,9 @@ export default css`
         z-index: -1;
         inset: 0px;
         height: auto;
+        background-image: url(/images/background.webp);
+        background-size: cover;
+        background-repeat: repeat;
     }
 
     .user-info {
