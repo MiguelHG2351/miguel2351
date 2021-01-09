@@ -1,18 +1,9 @@
-import { useSelector } from 'react-redux'
-
 import Head from "next/head";
 import Card from "components/Card";
 import styles from "styles/";
 
 export default function Index() {
-
-    const data = useSelector(state => {
-        return state
-    })
-
-    console.log(data)
-
-
+    
     return (
         <>
             <Head>

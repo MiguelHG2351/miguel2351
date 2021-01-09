@@ -1,34 +1,31 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
+
 import styles from "styles/header";
 
 export default function Header() {
 
-    const [theme, setTheme] = useState(null);
-
+    // States hooks
     const [menu, setMenu] = useState("sidenav");
 
+    // react-redux Hooks
+    const { theme } = useSelector(state => state)
+    const disptach = useDispatch()
+
+    //reference react
     const ref = useRef("overlay");
 
-    function changeTheme(e) {
+    /* Events */
 
-        console.log(e.currentTarget)
-
-        console.log(this)
-        if(theme == "dark") {
-            setTheme('light')
-        } else {
-            setTheme('dark')
-        }
+    function changeTheme() {
+        disptach({
+            type: 'SET_THEME',
+            theme: !theme.theme
+        })
+        console.log(theme)
     }
 
-    useEffect(() => {
-        let theme_default = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-        setTheme(theme_default)
-        
-    }, [])
-
-    /* Events */
 
     function openMenu() {
         ref.current.classList.add("active");
@@ -39,6 +36,15 @@ export default function Header() {
         e.currentTarget.classList.remove("active");
         setMenu("sidenav");
     }
+
+    // React hooks
+    useEffect(() => {
+        disptach({
+            type: 'SET_THEME',
+            theme: true
+        })
+        console.log(theme)
+    }, [])
 
     return (
         <header className="header-site">
@@ -55,7 +61,7 @@ export default function Header() {
                         </Link>
                     </h3>
                     <div className="options-user">
-                        <button className={`btn-set-mode ${theme}`} onClick={changeTheme}>
+                        <button className={`btn-set-mode ${theme ? 'dark' : 'light'}`} onClick={changeTheme}>
                             <i className="material-icons">bedtime</i>
                             <i className="material-icons">brightness_7</i>
                         </button>

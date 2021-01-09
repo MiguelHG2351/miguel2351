@@ -8,6 +8,7 @@ const initialState = {
   lastUpdate: 0,
   light: false,
   count: 0,
+  theme: null
 }
 
 const reducer = (state = initialState, action) => {
@@ -33,6 +34,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         count: initialState.count,
       }
+    case 'SET_THEME':
+        return {
+          ...state,
+          theme: action.theme
+        }
     default:
       return state
   }
