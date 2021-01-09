@@ -207,6 +207,7 @@ export default css.global`
     .responsive-img {
         max-width: 100%;
         height: auto;
+        object-fit: cover;
     }
 
     .circle {

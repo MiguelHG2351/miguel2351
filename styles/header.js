@@ -123,7 +123,7 @@ export default css`
         right: 0;
         bottom: 0;
         z-index: 10;
-        background-color: #fff;
+        background-color: #0c1633;
         overflow: hidden;
         transition: width ease 0.75s;
         height: 100%;
@@ -142,7 +142,6 @@ export default css`
 
     .profile {
         position: relative;
-        margin-bottom: 12px;
         height: auto;
         overflow: hidden;
     }
@@ -151,7 +150,7 @@ export default css`
         overflow: hidden;
         position: absolute;
         z-index: -1;
-        inset: 0px  ;
+        inset: 0px;
         height: auto;
     }
 
@@ -174,18 +173,24 @@ export default css`
         display: flex;
         transition: all ease 0.25s;
         align-items: center;
-        color: #000;
+        color: #fff;
         font-size: 14px;
+        background-color: #40587c;
+    }
+
+    .list-menu:nth-last-child(-n+4) {
+        margin-top: 12px;
     }
 
     .list-menu a:hover {
-        background: rgba(0, 0, 0, 0.2);
+        background: #6200ee;
         cursor: pointer;
+        color: #fff;
     }
 
     .list-menu a i {
         margin-right: 12px;
-        font-size: 18px;
+        font-size: 22px;
     }
 
     /* Overlay the menu */
