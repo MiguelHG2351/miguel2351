@@ -83,9 +83,10 @@ export default function Header() {
                             <div className="user-info">
                                 <div className="avatar">
                                     <img
-                                        src="/images/minecraft.jpg"
+                                        src="/images/minecraft.webp"
                                         className="responsive-img circle"
                                         alt="Avatar del usuario"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <a className="info">Miguel2351</a>

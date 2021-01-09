@@ -5,15 +5,7 @@ class MyDocument extends Document {
         return (
             <Html lang="es">
                 <Head>
-                    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-                    <link
-                        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-                        rel="stylesheet"
-                    />
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-                        rel="stylesheet"
-                    />
+                    <meta name="keywords" content="miguelhg2351, Miguel2351"/>
                 </Head>
                 <body>
                     <Main />
