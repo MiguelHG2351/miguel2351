@@ -71,7 +71,14 @@ export default css`
 @media screen and (min-width: 996px) {
     iframe {
             width: 600px;
-        }
+    }
+
+}
+
+@media screen and (max-width: 996px) {
+    .footer-info {
+        display: block;
+    }
 }
     
 `;

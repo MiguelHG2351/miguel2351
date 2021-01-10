@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Provider } from 'react-redux'
 import { useStore } from 'redux-config/store'
 
@@ -11,13 +12,18 @@ function MyApp({Component, pageProps}) {
     const store = useStore(pageProps.initialReduxState)
 
     return (
-        <Provider store={store}>
-            <Layout>
-                <Header />
-                <Component {...pageProps} />
-                <Footer />
-            </Layout>
-        </Provider>
+        <>
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            </Head>
+            <Provider store={store}>
+                <Layout>
+                    <Header />
+                    <Component {...pageProps} />
+                    <Footer />
+                </Layout>
+            </Provider>
+        </>
     );
 }
 

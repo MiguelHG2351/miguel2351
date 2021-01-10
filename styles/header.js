@@ -8,6 +8,7 @@ export default css`
         box-shadow: var(--shadow-ligth);
         padding: 12px;
         background-color: rgb(33 30 43);
+        box-shadow: 0 0 10px 0px #3b557e;
     }
 
     .container-header {
@@ -35,9 +36,6 @@ export default css`
 
     .name {
         position: relative;
-    }
-
-    .name a {
         color: #eee;
         text-decoration: none;
     }
@@ -48,27 +46,34 @@ export default css`
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
-        padding: 12px;
         z-index: 2;
         background-color: #09f;
         left: 0;
         right: 0;
-        height: 150px;
         background-color: #fff;
         box-shadow: var(--shadow-ligth);
+        transition: all ease 0.2s;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .options-user.active {
+        height: 150px;
     }
 
     .btn-set-mode {
         padding: 14px 6px;
         position: relative;
         border: none;
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         border-radius: 15px;
         outline: none;
         cursor: pointer;
         transition: transform 0.2s ease-in;
+        margin: 0 auto;
+        margin-top: 12px;
     }
     
     .btn-set-mode:hover {

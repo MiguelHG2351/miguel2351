@@ -162,6 +162,7 @@ export default css.global`
         direction: ltr;
         -webkit-font-feature-settings: "liga";
         -webkit-font-smoothing: antialiased;
+        font-display: Arial, Helvetica;
     }
 
     :root {

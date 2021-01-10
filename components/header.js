@@ -8,6 +8,7 @@ export default function Header() {
 
     // States hooks
     const [menu, setMenu] = useState("sidenav");
+    const [themeMenu, setThemeMenu] = useState('options-user')
 
     // react-redux Hooks
     const { theme } = useSelector(state => state)
@@ -37,6 +38,13 @@ export default function Header() {
         setMenu("sidenav");
     }
 
+    function closeMenuTheme() {
+        if(themeMenu === 'options-user') {
+            return setThemeMenu('options-user active')
+        }
+        setThemeMenu('options-user')
+    }
+
     // React hooks
     useEffect(() => {
         disptach({
@@ -54,13 +62,11 @@ export default function Header() {
                         <i className="material-icons">sort</i>
                     </button>
                 </div>
-                <div className="name">
+                <div className="name" onClick={closeMenuTheme} >
                     <h3>
-                        <Link href="/">
-                            <a>Miguel2351</a>
-                        </Link>
+                        Miguel2351
                     </h3>
-                    <div className="options-user">
+                    <div className={themeMenu}>
                         <button className={`btn-set-mode ${theme ? 'dark' : 'light'}`} onClick={changeTheme}>
                             <i className="material-icons">bedtime</i>
                             <i className="material-icons">brightness_7</i>
