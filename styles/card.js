@@ -8,6 +8,7 @@ export const styles = css`
         border: none;
         border-radius: 8px;
         transition: all ease 0.18s;
+        transform: scale(0.7);
     }
 
     .principal {
@@ -15,7 +16,6 @@ export const styles = css`
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.4);
         transition: all ease 0.45s;
-        transform: scale(0.7);
     }
 
     .card:hover {
