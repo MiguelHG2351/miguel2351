@@ -4,7 +4,7 @@ export const styles = css`
     .card {
         text-decoration: none;
         display: block;
-        margin: 52px 0;
+        margin: 5px 0;
         border: none;
         border-radius: 8px;
         transition: all ease 0.18s;
@@ -15,6 +15,7 @@ export const styles = css`
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.4);
         transition: all ease 0.45s;
+        transform: scale(0.7);
     }
 
     .card:hover {
@@ -36,6 +37,9 @@ export const styles = css`
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     .project-name {

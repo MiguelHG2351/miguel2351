@@ -25,9 +25,6 @@ export default function Card(props) {
                     <style jsx>{`
                         .background {
                             background-image: url(${props.image});
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                            background-position: center;
                         }
                     `}</style>
                 </a>
