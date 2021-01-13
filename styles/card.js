@@ -14,7 +14,6 @@ export const styles = css`
         cursor: pointer;
         padding: 12px;
         background-color: rgba(0, 0, 0, 0.4);
-        box-shadow: 0 0 3px #000;
         transition: all ease 0.45s;
     }
 
@@ -24,7 +23,6 @@ export const styles = css`
 
     .card:hover .principal {
         background-color: rgba(0, 0, 0, 0.8);
-        box-shadow: 0 0 3px #000;
     }
 
     .background {

@@ -23,6 +23,7 @@ export default css`
         justify-content: center;
         margin-top: 8px;
         padding: 12px 5px;
+        box-sizing: border-box;
     }
 
     .section-footer-link a {

@@ -5,7 +5,7 @@ export default function Card(props) {
     return (
         <>
             <Link href={props.url}>
-                <a className="card blue-filter">
+                <a className="card">
                     <div className="principal relative">
                         <div className="info">
                             <div className="project-name">
