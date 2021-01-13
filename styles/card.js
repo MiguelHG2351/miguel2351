@@ -32,7 +32,6 @@ export const styles = css`
         right: 0;
         bottom: 0;
         z-index: -1;
-        overflow: hidden;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
