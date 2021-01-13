@@ -130,15 +130,16 @@ export default css`
         z-index: 10;
         background-color: #0c1633;
         overflow: hidden;
-        transition: width ease 0.75s;
+        transition: transform ease 0.45s;
         height: 100%;
-        width: 0;
+        width: 80%;
         overflow-y: auto;
+        transform: translateX(-100%);
     }
 
     .sidenav.active {
         display: block;
-        width: 80%;
+        transform: translateX(0);
     }
 
     .sidenav::-webkit-scrollbar {
