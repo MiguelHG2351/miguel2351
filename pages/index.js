@@ -11,7 +11,7 @@ export default function Index() {
                     name="description"
                     content="Página principal Miguel2351"
                 />
-                <title>Miguel2351 | Miguel Hernández Gaitan</title>
+                <title>MiguelHG2351 | Miguel Hernández Gaitan</title>
                 <link rel="icon" href="/images/favicon.ico" />
                 <meta name="theme-color" content="#09f" />
             </Head>
