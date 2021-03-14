@@ -1,10 +1,10 @@
 const withPWA = require('next-pwa')
-const runtimeCache = require('next-pwa/cache')
+const runtimeCaching = require('next-pwa/cache')
 
 const pwa = withPWA({
     pwa: {
         dest: 'public',
-        runtimeCache
+        runtimeCaching
     }
 })
 
