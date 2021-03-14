@@ -5,15 +5,6 @@ const pwa = withPWA({
     pwa: {
         dest: 'public',
         runtimeCache
-    },
-    redirects: async () => {
-        return [
-            {
-                source: '/about',
-                destination: '/',
-                permanent: true
-            }
-        ]
     }
 })
 
