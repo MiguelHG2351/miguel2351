@@ -1,23 +1,22 @@
-const withPWA = require('next-pwa')
+const withWPA = require('next-pwa')
 const runtimeCaching = require('next-pwa/cache')
 
-const pwa = withPWA({
+const settings = {
+    env: {
+    },
+    devIndicators: {
+      autoPrerender: false,
+    },
+    pwa: {
+      dest: 'public',
+    },
+  };
+
+const pwa = withWPA({
     pwa: {
         dest: 'public',
         runtimeCaching
     }
 })
-
-const settings = {
-    redirects: async () => {
-        return [
-            {
-                source: '/about',
-                destination: '/',
-                permanent: true
-            }
-        ]
-    }
-}
 
 module.exports = process.env.PORT ? pwa : settings
