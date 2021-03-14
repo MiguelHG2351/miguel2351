@@ -9,7 +9,6 @@ export default function Page() {
     const dispatch = useDispatch()
   
     // Tick the time every second
-    console.log('El estado esta cambiando F')
     useInterval(() => {
       dispatch({
         type: 'TICK',
