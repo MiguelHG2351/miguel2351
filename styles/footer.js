@@ -60,9 +60,8 @@ export default css`
     }
 
     .iframe-container {
-            display: flex;
-            justify-content: center;
-        }
+        overflow: hidden;
+    }
 
         iframe {
             object-fit: cover;

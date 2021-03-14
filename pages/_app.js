@@ -3,7 +3,6 @@ import { Provider } from 'react-redux'
 import { useStore } from 'redux-config/store'
 
 // Component
-import Layout from "components/Layout/Layout";
 import Header from "components/header";
 import Footer from "components/footer";
 
@@ -18,11 +17,9 @@ function MyApp({Component, pageProps}) {
                 <meta name="google-site-verification" content="DoX9ksUU8nNRym8pev2b3JZ-BiHRVeyg2Omr8vJ0veM" />
             </Head>
             <Provider store={store}>
-                <Layout>
-                    <Header />
-                    <Component {...pageProps} />
-                    <Footer />
-                </Layout>
+                <Header />
+                <Component {...pageProps} />
+                <Footer />
             </Provider>
         </>
     );

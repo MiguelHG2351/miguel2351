@@ -6,7 +6,7 @@ export default css`
 
     .header-site {
         box-shadow: var(--shadow-ligth);
-        padding: 12px;
+        padding: 8px;
         background-color: rgb(33 30 43);
         box-shadow: 0 0 10px 0px #3b557e;
     }
@@ -21,6 +21,7 @@ export default css`
     .nav-button {
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         flex-grow: 2;
     }
 
@@ -38,6 +39,10 @@ export default css`
         position: relative;
         color: #eee;
         text-decoration: none;
+    }
+
+    .name img {
+        vertical-align: middle;
     }
 
     .options-user {

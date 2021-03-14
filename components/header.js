@@ -57,15 +57,8 @@ export default function Header() {
     return (
         <header className="header-site">
             <div className="container-header">
-                <div className="nav-button">
-                    <button className="btn" onClick={openMenu}>
-                        <i className="material-icons">sort</i>
-                    </button>
-                </div>
                 <div className="name" onClick={closeMenuTheme} >
-                    <h3>
-                        Miguel2351
-                    </h3>
+                    <img src="/images/logo48x48.png" alt="Logo"/>
                     <div className={themeMenu}>
                         <button className={`btn-set-mode ${theme ? 'dark' : 'light'}`} onClick={changeTheme}>
                             <i className="material-icons">bedtime</i>
@@ -73,7 +66,11 @@ export default function Header() {
                         </button>
                     </div>
                 </div>
-                
+                <div className="nav-button">
+                    <button className="btn" onClick={openMenu}>
+                        <i className="material-icons">menu</i>
+                    </button>
+                </div>
 
                 <div className={menu}>
                     <div className="user">
