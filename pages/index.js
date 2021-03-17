@@ -5,7 +5,6 @@ import Card from "components/Card";
 import styles from "styles/";
 
 export default function Index() {
-    
     return (
         <>
             <Head>
@@ -20,8 +19,17 @@ export default function Index() {
             <Layout>
                 <section className="description">
                     <header className="profile-me">
-                        <h1>Miguel Angel Hernández Gaitan</h1>
-                        <b>FrontEnd Developer en tecnologías web</b>
+                        <img
+                            src="/images/hero_image.png"
+                            width="100%"
+                            alt="Tecnologías Conocidas"
+                        />
+                        <h1>Miguel Hernández</h1>
+                        <b>Desarrollo Web con Node y ReactJS</b>
+                        <p style={{textAlign: 'left', margin: '0 20px', lineHeight: '1.6'}}>
+                            A lo largo de mi carrera como FrontEnd, he tenido la
+                            capacidad de crear proyectos para mejorar mi experiencia como FrontEnd Developer.
+                        </p>
                     </header>
                     <article className="project">
                         <Card
@@ -31,7 +39,7 @@ export default function Index() {
                             alt="Logo de proyectos principales con ReactJS, NodeJS, MongoDB, Firebase"
                             url="/reactjs/"
                             color="primary"
-                            />
+                        />
                         <Card
                             proyect="CRUD"
                             technologies="Express, NodeJS, MongoDB, Webpack"
@@ -39,7 +47,7 @@ export default function Index() {
                             alt="Logo de proyectos principales con Express, NodeJS, MongoDB, Webpack"
                             url="/crud/"
                             color="warning"
-                            />
+                        />
                         <Card
                             proyect="GraphQL"
                             technologies="GraphQL, NodeJS, MongoDB, Webpack"

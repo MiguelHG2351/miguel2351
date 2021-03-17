@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { styles } from "../styles/card_project";
+import { styles } from "./styles/card_project";
 
 export default function Card_project() {
     return (

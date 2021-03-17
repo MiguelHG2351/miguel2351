@@ -129,7 +129,7 @@ export default css`
     .sidenav {
         position: fixed;
         top: 0;
-        left: 0;
+        left: unset;
         right: 0;
         bottom: 0;
         z-index: 10;
@@ -139,7 +139,7 @@ export default css`
         height: 100%;
         width: 0;
         overflow-y: auto;
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
 
     .sidenav.active {
