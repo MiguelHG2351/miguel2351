@@ -15,6 +15,7 @@ export default function Index() {
                 <title>MiguelHG2351 | Miguel Hernández Gaitan</title>
                 <link rel="icon" href="/images/favicon.ico" />
                 <meta name="theme-color" content="#09f" />
+                <script src="/custom-properties.js"></script>
             </Head>
             <Layout>
                 <section className="description">
@@ -26,11 +27,13 @@ export default function Index() {
                         />
                         <h1>Miguel Hernández</h1>
                         <b>Desarrollo Web con Node y ReactJS</b>
-                        <p style={{textAlign: 'left', margin: '0 20px', lineHeight: '1.6'}}>
+                        <p style={{margin: '20px', lineHeight: '1.6', fontSize: '14px'}}>
                             A lo largo de mi carrera como FrontEnd, he tenido la
                             capacidad de crear proyectos para mejorar mi experiencia como FrontEnd Developer.
                         </p>
                     </header>
+                    <div className="bar-content">
+                    </div>
                     <article className="project">
                         <Card
                             proyect="ReactJS"
