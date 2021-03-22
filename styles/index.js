@@ -112,46 +112,12 @@ export default css`
         color: var(--color-dark-mode);
     }
 
+    .btn.hero__github {
+        margin: 10px 0 20px 0;
+    }
+
     .bubble-wrapper {
         position: relative;
-    }
-    
-    .bubble-draw {
-        position: absolute;
-        top: 20px;
-        left: 50px;
-        z-index: -1;
-        transition: transform 0.2s ease;
-        animation-name: jump-bubble;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-fill-mode: both;
-        opacity: .9;
-    }
-
-    @keyframes jump-bubble {
-        0% {
-            transform: translate(1.5px, 1.5px);
-        }
-        
-        25% {
-            opacity: .6;
-            transform: translate(-1.5px, 1.5px);
-        }
-
-        50% {
-            transform: translate(-1.5px, 1.5px);
-        }
-
-        75% {
-            transform: translate(-1.5px, 1.5px);
-            opacity: .9;
-        }
-
-        100% {
-            transform: translate(1.5px, 1.5px);
-            opacity: 1;
-        }
     }
 
     .arrow-down-container {
@@ -164,7 +130,72 @@ export default css`
         width: 84px;
     }
 
-    .project {
+    .projects {
+        margin-top: 56px;
+    }
+
+    .title-project {
+        display: inline-block;
+        background-color: #010101;
+        box-shadow: -5px 2px #8bc34a;
+    }
+
+    .title-project a {
+        display: inline-block;
+        color: #40dfd4;
+        padding: 4px 25px;
+        font-size: 24px;
+    }
+
+    .description-project {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .code {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        margin: 20px 0;
+    }
+
+    .project + .project {
+        margin-bottom: 20px;
+    }
+
+    .btn.preview, .btn.github {
+        width: 80%;
+        font-size: 16px;
+        border-radius: 12px;
+        padding: 12px 12px;
+    }
+
+    .btn.github {
+        border: 1px solid #09f;
+        background-color: #09f;
+        transition: border 0.1s ease;
+        color: #eee;
+    }
+
+    .btn.github:hover {
+        background-color: transparent;
+        color: #eee;
+    }
+
+    .btn.preview {
+        border: 1px solid #eee;
+        background-color: #eee;
+        color: #111;
+        transition: background 0.1s ease;
+    }
+
+    .btn.preview:hover {
+        background-color: transparent;
+        color: #eee;
+    }
+
+    .project-all {
         z-index: 2;
     }
 
@@ -179,11 +210,41 @@ export default css`
     }
 
     @media screen and (min-width: 996px) {
-        .project {
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 50px;
+            grid-template-areas: "hero_content hero_image";
+        }
+
+        .hero__content {
+            grid-area: hero_content;
+        }
+
+        .hero__content h1 {
+            font-size: 26px;
+        }
+
+        .hero__github a {
+            font-size: 18px;
+        }
+
+        .hero__image {
+            grid-area: hero_image;
+        }
+
+        .project-principal h3 {
+            text-align: center;
+        }
+
+
+
+        .project-all, .projects {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px 50px;
         }
+
     }
 
 `

@@ -175,7 +175,6 @@ export default css.global`
         --color-dark-mode: #eee;
     }
     * {
-        margin: 0;
         font-family: "Roboto", Arial, Helvetica, sans-serif;
     }
     body {
@@ -212,10 +211,6 @@ export default css.global`
         display: inline-block;
         padding: 0;
         background-color: transparent;
-    }
-
-    .btn.github {
-        margin: 10px 0 20px 0;
     }
 
     .responsive-img {

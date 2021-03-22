@@ -1,5 +1,4 @@
 if('registerProperty' in CSS) {
-    console.log(CSS)
     try {
         window.CSS.registerProperty({
             name: '--primary-color',
