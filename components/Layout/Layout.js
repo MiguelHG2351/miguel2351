@@ -1,8 +1,10 @@
-import globalStyles from 'styles/global'
+import globalStyles from 'components/Layout/global'
 
 export default function Layout(props) {
   return <>
-    {props.children}
+      <main className="container">
+        {props.children}
+      </main>
     <style jsx global>
       {globalStyles}
     </style>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { styles } from "styles/card";
+import { styles } from "components/styles/card";
 
 export default function Card(props) {
     return (

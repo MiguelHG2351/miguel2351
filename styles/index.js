@@ -6,22 +6,30 @@ export default css`
         margin-top: 40px;
     }
 
-    .profile-me {
-        text-align: center;
+    /* .hero {
+        width: 90%;
+        margin: 0 auto;
+    } */
+
+    .hero__image {
         width: 90%;
         margin: auto;
-        color: #eee;
         animation-name: fade-in;
         animation-duration: 0.5s;
         animation-timing-function: ease;
         animation-fill-mode: both;
     }
 
+    .hero__content {
+        text-align: center;
+        color: var(--color-dark-mode);
+    }
+
     .bar-content {
         position: relative;
-        height: 250px;
-        width: 90%;
-        margin: 0 auto;
+        /* --primary-color: #d87211;
+        --secondary-color: #e91e63;
+        --tertiary-color: #9c27b0; */
         --primary-color: #d87211;
         --secondary-color: #e91e63;
         --tertiary-color: #9c27b0;
@@ -30,7 +38,7 @@ export default css`
     .bar-content::before {
         content: '';
         position: absolute;
-        left: 20px;
+        left: 0px;
         top: 0;
         bottom: 0;
         width: 4px;
@@ -45,11 +53,10 @@ export default css`
     }
 
     .bar-content::after {
-        --secondary-color: linear-gradient(to bottom, #d87211, #e91e63, #9c27b0);
         content: '';
         position: absolute;
         left: unset;
-        right: 20px;
+        right: 0px;
         top: 0;
         bottom: 0;
         width: 4px;
@@ -97,8 +104,64 @@ export default css`
         }
     }
 
-    .profile-me h1 {
+    .hero__content h1 {
         letter-spacing: -0.42px;
+    }
+
+    .project-principal {
+        color: var(--color-dark-mode);
+    }
+
+    .bubble-wrapper {
+        position: relative;
+    }
+    
+    .bubble-draw {
+        position: absolute;
+        top: 20px;
+        left: 50px;
+        z-index: -1;
+        transition: transform 0.2s ease;
+        animation-name: jump-bubble;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        opacity: .9;
+    }
+
+    @keyframes jump-bubble {
+        0% {
+            transform: translate(1.5px, 1.5px);
+        }
+        
+        25% {
+            opacity: .6;
+            transform: translate(-1.5px, 1.5px);
+        }
+
+        50% {
+            transform: translate(-1.5px, 1.5px);
+        }
+
+        75% {
+            transform: translate(-1.5px, 1.5px);
+            opacity: .9;
+        }
+
+        100% {
+            transform: translate(1.5px, 1.5px);
+            opacity: 1;
+        }
+    }
+
+    .arrow-down-container {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .arrow-down {
+        width: 84px;
     }
 
     .project {
@@ -117,8 +180,6 @@ export default css`
 
     @media screen and (min-width: 996px) {
         .project {
-            width: 90%;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 5px 50px;

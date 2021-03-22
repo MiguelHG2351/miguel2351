@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 
-import styles from "styles/header";
+import styles from "components/styles/header";
 
 export default function Header() {
 
@@ -15,7 +15,7 @@ export default function Header() {
     const disptach = useDispatch()
 
     //reference react
-    const ref = useRef("overlay");
+    const overlay = useRef("overlay");
 
     /* Events */
 
@@ -29,12 +29,12 @@ export default function Header() {
 
 
     function openMenu() {
-        ref.current.classList.add("active");
+        overlay.current.classList.add("active");
         setMenu("sidenav active");
     }
 
-    function closeMenu(e) {
-        e.currentTarget.classList.remove("active");
+    function closeMenu() {
+        overlay.current.classList.remove("active");
         setMenu("sidenav");
     }
 
@@ -94,14 +94,14 @@ export default function Header() {
                         </div>
                     </div>
                     <ul className="menu">
-                        <li className="list-menu">
+                        <li className="list-menu" onClick={closeMenu}>
                             <Link href="/">
                                 <a>
                                     <i className="material-icons">home</i>Inicio
                                 </a>
                             </Link>
                         </li>
-                        <li className="list-menu">
+                        <li className="list-menu" onClick={closeMenu}>
                             <Link href="/project">
                                 <a>
                                     <i className="material-icons">build</i>
@@ -109,21 +109,21 @@ export default function Header() {
                                 </a>
                             </Link>
                         </li>
-                        <li className="list-menu">
+                        <li className="list-menu" onClick={closeMenu}>
                             <Link href="/book">
                                 <a>
                                     <i className="material-icons">book</i>Blog
                                 </a>
                             </Link>
                         </li>
-                        <li className="list-menu">
+                        <li className="list-menu" onClick={closeMenu}>
                             <Link href="/about">
                                 <a>
                                     <i className="material-icons">info</i>About
                                 </a>
                             </Link>
                         </li>
-                        <li className="list-menu">
+                        <li className="list-menu" onClick={closeMenu}>
                             <Link href="/about">
                                 <a>
                                     <i className="material-icons">
@@ -136,7 +136,7 @@ export default function Header() {
                     </ul>
                 </div>
             </div>
-            <div className="overlay" ref={ref} onClick={closeMenu}></div>
+            <div className="overlay" ref={overlay} onClick={closeMenu}></div>
             <style jsx>{styles}</style>
         </header>
     );

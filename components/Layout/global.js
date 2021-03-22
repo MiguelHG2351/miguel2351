@@ -172,6 +172,7 @@ export default css.global`
         --primary: #009cf7;
         --warning: #ffd900;
         --secondary: #00fe00;
+        --color-dark-mode: #eee;
     }
     * {
         margin: 0;
@@ -183,7 +184,6 @@ export default css.global`
         font-size: 18px;
         font-weight: 400;
         line-height: 1.8;
-        color: #aaa;
         font-family: sans-serif;
         background-color: #0c1633;
     }
@@ -199,11 +199,23 @@ export default css.global`
         text-decoration: none;
     }
 
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .btn {
         border: none;
         outline: none;
         border: none;
         cursor: pointer;
+        display: inline-block;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .btn.github {
+        margin: 10px 0 20px 0;
     }
 
     .responsive-img {
@@ -214,6 +226,11 @@ export default css.global`
 
     .circle {
         border-radius: 50%;
+    }
+    
+    .spacing-container {
+        width: 90%;
+        margin: 0 auto;
     }
 
     ul {
@@ -226,6 +243,14 @@ export default css.global`
     }
     .relative {
         position: relative;
+    }
+
+    .btn-primary {
+        padding: 8px 25px;
+        border: none;
+        border-radius: 6px;
+        background-color: #009cf7;
+        color: #eee;
     }
 
     .primary {
