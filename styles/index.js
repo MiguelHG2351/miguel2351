@@ -3,7 +3,7 @@ import css from 'styled-jsx/css'
 export default css`
 
     .description {
-        margin-top: 40px;
+        margin-top: 2.5rem;
     }
 
     /* .hero {
@@ -25,6 +25,10 @@ export default css`
         color: var(--color-dark-mode);
     }
 
+    .hero__content h1 {
+        font-size: 1.75rem;
+    }
+
     .bar-content {
         position: relative;
         /* --primary-color: #d87211;
@@ -41,7 +45,7 @@ export default css`
         left: 0px;
         top: 0;
         bottom: 0;
-        width: 4px;
+        width: 0.25rem;
         background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color), var(--tertiary-color));
         transition: background 0.2s ease-in;
         animation-name: changeGradient;
@@ -59,7 +63,7 @@ export default css`
         right: 0px;
         top: 0;
         bottom: 0;
-        width: 4px;
+        width: 0.25rem;
         background-image: linear-gradient(to bottom, var(--tertiary-color), var(--secondary-color), var(--primary-color));
         transition: background 0.2s ease-in;
         animation-name: changeGradient;
@@ -222,7 +226,7 @@ export default css`
         }
 
         .hero__content h1 {
-            font-size: 26px;
+            font-size: 2rem;
         }
 
         .hero__github a {

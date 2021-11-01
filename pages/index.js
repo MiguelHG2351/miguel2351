@@ -1,11 +1,14 @@
+import { useSelector } from "react-redux";
 import Head from "next/head";
-import Layout from "components/Layout/Layout";
+
 
 import Card from "components/Card";
 import Bubble from "components/bubble";
 import styles from "styles/";
 
 export default function Index() {
+    const { projects } = useSelector((state) => state);
+
     return (
         <>
             <Head>
@@ -18,7 +21,7 @@ export default function Index() {
                 <meta name="theme-color" content="#09f" />
                 <script src="/custom-properties.js" />
             </Head>
-            <Layout>
+            <main className="container">
                 <section className="description">
                     <section className="hero">
                         <header className="hero__image">
@@ -30,12 +33,12 @@ export default function Index() {
                         </header>
                         <article className="hero__content bar-content">
                             <h1>Miguel Hernández</h1>
-                            <b>Desarrollo Web con Node y ReactJS</b>
+                            <b>Desarrollo Web con ReactJS | Redux | TailwindCSS | GraphQL | MongoDB</b>
                             <p
                                 style={{
-                                    margin: "20px",
+                                    margin: "1.25rem",
                                     lineHeight: "1.6",
-                                    fontSize: "14px",
+                                    fontSize: ".80rem",
                                 }}
                             >
                                 A lo largo de mi carrera como FrontEnd, he
@@ -77,113 +80,43 @@ export default function Index() {
                             </svg>
                         </div>
                         <article className="projects">
-                            <div className="project">
-                                <div className="project-preview">
-                                    <img
-                                        src="/images/qonexia.png"
-                                        srcSet="/images/qonexia.png 1x, /images/qonexia2x.png 2x, /images/qonexia3x.png 3x"
-                                        className="responsive-img"
-                                        alt="Proyecto Qonexia"
-                                    />
-                                </div>
-                                <div className="content-project">
-                                    <div className="title-project">
-                                        <a
-                                            target="_blank"
-                                            href="https://qonexia-react.vercel.app/"
-                                        >
-                                            qonexia.com
-                                        </a>
+                            {
+                                projects.map((project) => (
+                                <div className="project" key={project.name}>
+                                    <div className="project-preview">
+                                        <img
+                                            src={`${project.image1x}`}
+                                            srcSet={`${project.image1x} 1x, ${project.image2x} 2x, ${project.image3x} 3x`}
+                                            className="responsive-img"
+                                            alt={`Proyecto ${project.name}`}
+                                        />
                                     </div>
-                                    <div className="description-project">
-                                        <p>
-                                            Somos Qonexia, una empresa con más
-                                            de 7 años en el mercado, que te
-                                            ofrece la mayor variedad de
-                                            productos tecnológicos e innovadores
-                                            para tu entretenimiento
-                                        </p>
-                                    </div>
-                                    <div className="code">
-                                        <button className="btn preview">
-                                            Ver Proyecto
-                                        </button>
-                                        <button className="btn github">
-                                            Ver Código
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="project">
-                                <div className="preview-project">
-                                    <img
-                                        src="/images/flag-project.png"
-                                        srcSet="/images/flag-project.png 1x, /images/flag-project2x.png 2x, /images/flag-project3x.png 3x"
-                                        className="responsive-img"
-                                        alt="Proyecto Qonexia"
-                                    />
-                                </div>
-                                <div className="content-project">
-                                    <div className="title-project">
-                                        <a
-                                            target="_blank"
-                                            href="https://miguelhg2351.github.io/API-REST-COUNTRIES/"
-                                        >
-                                            api-rest-flags.com
-                                        </a>
-                                    </div>
-                                    <div className="description-project">
-                                        <p>
-                                            API REST que te permite buscar un
-                                            país, ver todos los de un continente
-                                            y la descripción de cada uno de
-                                            ellos.
-                                        </p>
-                                    </div>
-                                    <div className="code">
-                                        <button className="btn preview">
-                                            Ver Proyecto
-                                        </button>
-                                        <button className="btn github">
-                                            Ver Código
-                                        </button>
+                                    <div className="content-project">
+                                        <div className="title-project">
+                                            <a
+                                                target="_blank"
+                                                href={`${project.url}`}
+                                            >
+                                                { project.name }
+                                            </a>
+                                        </div>
+                                        <div className="description-project">
+                                            <p>
+                                            {project.description}
+                                            </p>
+                                        </div>
+                                        <div className="code">
+                                            <button className="btn preview">
+                                                Ver Proyecto
+                                            </button>
+                                            <button className="btn github">
+                                                Ver Código
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="project">
-                                <div className="preview-project">
-                                    <img
-                                        src="/images/redaccion.png"
-                                        srcSet="/images/redaccion.png 1x, /images/redaccion2x.png 2x, /images/redaccion3x.png 3x"
-                                        className="responsive-img"
-                                        alt="Proyecto Qonexia"
-                                    />
-                                </div>
-                                <div className="content-project">
-                                    <div className="title-project">
-                                        <a href="https://redaccion-tecnica.vercel.app/">
-                                            redaccion-tecnica
-                                        </a>
-                                    </div>
-                                    <div className="description-project">
-                                        <p>
-                                            Proyecto final para la clase de
-                                            redacción técnica para mostrar las
-                                            diferentes exposiciones de las
-                                            carreras de Ing. Computacón, Ing
-                                            agricola e Ingeniería civil.
-                                        </p>
-                                    </div>
-                                    <div className="code">
-                                        <button className="btn preview">
-                                            Ver Proyecto
-                                        </button>
-                                        <button className="btn github">
-                                            Ver Código
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                                ))
+                            }
                         </article>
                     </section>
                     <article className="project-all">
@@ -213,7 +146,7 @@ export default function Index() {
                         />
                     </article>
                 </section>
-            </Layout>
+            </main>
             <style jsx>{styles}</style>
         </>
     );

@@ -102,7 +102,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
-                            <Link href="/project">
+                            <Link href="/projects">
                                 <a>
                                     <i className="material-icons">build</i>
                                     Project
@@ -110,11 +110,9 @@ export default function Header() {
                             </Link>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
-                            <Link href="/book">
-                                <a>
-                                    <i className="material-icons">book</i>Blog
-                                </a>
-                            </Link>
+                            <a href="https://curso-javascript-miguelhg2351.vercel.app/" target="_blank">
+                                <i className="material-icons">book</i>Blog
+                            </a>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
                             <Link href="/about">
