@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }) {
                     name="google-site-verification"
                     content="DoX9ksUU8nNRym8pev2b3JZ-BiHRVeyg2Omr8vJ0veM"
                 />
-                <link rel="manifest" href="/manifest.webmanifest" />
+                <link rel="manifest" href="/manifest.json" />
                 <link
                     rel="shortcut icon"
                     href="/images/favicon.ico"
