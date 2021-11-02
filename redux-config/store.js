@@ -7,7 +7,7 @@ let store
 let projects = [
   {
     name: 'qonexia',
-    url: 'https://qonexia-react-red.vercel.app/',
+    url: 'https://qonexia-react.vercel.app/',
     github: 'https://github.com/MiguelHG2351/qonexia-CRA',
     description: 'Somos Qonexia, una empresa con más de 7 años en el mercado, que te ofrece la mayor variedad de productos tecnológicos e innovadores para tu entretenimiento',
     image1x: '/images/qonexia.png',
