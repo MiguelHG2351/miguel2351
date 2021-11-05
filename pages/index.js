@@ -106,12 +106,12 @@ export default function Index() {
                                             </p>
                                         </div>
                                         <div className="code">
-                                            <button className="btn preview">
+                                            <a href={project.url} target="_blank" className="btn preview">
                                                 Ver Proyecto
-                                            </button>
-                                            <button className="btn github">
+                                            </a>
+                                            <a href={project.github} target="_blank" className="btn github">
                                                 Ver Código
-                                            </button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

@@ -62,6 +62,9 @@ export default css.global`
         display: inline-block;
         padding: 0;
         background-color: transparent;
+        line-height: normal;
+        box-sizing: border-box;
+        text-align: center;
     }
 
     .responsive-img {

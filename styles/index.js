@@ -170,7 +170,7 @@ export default css`
 
     .btn.preview, .btn.github {
         width: 80%;
-        font-size: 16px;
+        font-size: 1rem;
         border-radius: 12px;
         padding: 12px 12px;
     }
