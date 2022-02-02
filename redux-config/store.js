@@ -6,6 +6,15 @@ let store
 
 let projects = [
   {
+    name: 'Nicsmart',
+    url: 'https://nicsmart.vercel.app/',
+    github: 'https://github.com/0LOLUOXH/Nicsmart',
+    description: 'En nicsmart encontrarás los productos de tu preferencia y con disponibilidad de pago en línea evitando que pierdas tu tiempo.',
+    image1x: '/images/nicsmart.png',
+    image2x: '/images/nicsmart2x.png',
+    image3x: '/images/nicsmart3x.png',
+  },
+  {
     name: 'qonexia',
     url: 'https://qonexia-react.vercel.app/',
     github: 'https://github.com/MiguelHG2351/qonexia-CRA',
