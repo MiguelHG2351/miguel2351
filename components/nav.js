@@ -4,13 +4,13 @@ const Nav = () => {
   return (
     <nav>
       <Link href="/">
-        <a>Index</a>
+        Index
       </Link>
       <Link href="/ssg">
-        <a>SSG</a>
+        SSG
       </Link>
       <Link href="/ssr">
-        <a>SSR</a>
+        SSR
       </Link>
       <style jsx>
         {`

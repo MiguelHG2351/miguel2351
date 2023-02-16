@@ -1,18 +1,17 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 
 import styles from "components/styles/header";
 
 export default function Header() {
-
     // States hooks
     const [menu, setMenu] = useState("sidenav");
-    const [themeMenu, setThemeMenu] = useState('options-user')
+    const [themeMenu, setThemeMenu] = useState("options-user");
 
     // react-redux Hooks
-    const { theme } = useSelector(state => state)
-    const disptach = useDispatch()
+    const { theme } = useSelector((state) => state);
+    const disptach = useDispatch();
 
     //reference react
     const overlay = useRef("overlay");
@@ -21,12 +20,11 @@ export default function Header() {
 
     function changeTheme() {
         disptach({
-            type: 'SET_THEME',
-            theme: !theme.theme
-        })
-        console.log(theme)
+            type: "SET_THEME",
+            theme: !theme.theme,
+        });
+        console.log(theme);
     }
-
 
     function openMenu() {
         overlay.current.classList.add("active");
@@ -39,28 +37,33 @@ export default function Header() {
     }
 
     function closeMenuTheme() {
-        if(themeMenu === 'options-user') {
-            return setThemeMenu('options-user active')
+        if (themeMenu === "options-user") {
+            return setThemeMenu("options-user active");
         }
-        setThemeMenu('options-user')
+        setThemeMenu("options-user");
     }
 
     // React hooks
     useEffect(() => {
         disptach({
-            type: 'SET_THEME',
-            theme: true
-        })
-        console.log(theme)
-    }, [])
+            type: "SET_THEME",
+            theme: true,
+        });
+        console.log(theme);
+    }, []);
 
     return (
         <header className="header-site">
             <div className="container-header">
-                <div className="name" onClick={closeMenuTheme} >
-                    <img src="/images/logo48x48.png" alt="Logo"/>
+                <div className="name" onClick={closeMenuTheme}>
+                    <img src="/images/logo48x48.png" alt="Logo" />
                     <div className={themeMenu}>
-                        <button className={`btn-set-mode ${theme ? 'dark' : 'light'}`} onClick={changeTheme}>
+                        <button
+                            className={`btn-set-mode ${
+                                theme ? "dark" : "light"
+                            }`}
+                            onClick={changeTheme}
+                        >
                             <i className="material-icons">bedtime</i>
                             <i className="material-icons">brightness_7</i>
                         </button>
@@ -75,8 +78,7 @@ export default function Header() {
                 <div className={menu}>
                     <div className="user">
                         <div className="profile">
-                            <div className="background">
-                            </div>
+                            <div className="background"></div>
                             <div className="user-info">
                                 <div className="avatar">
                                     <img
@@ -86,8 +88,16 @@ export default function Header() {
                                         loading="lazy"
                                     />
                                 </div>
-                                <a className="info" href="https://github.com/MiguelHG2351">Miguel2351</a>
-                                <a className="info" href="mailto:miguelhernandezgaitan13@gmail.com">
+                                <a
+                                    className="info"
+                                    href="https://github.com/MiguelHG2351"
+                                >
+                                    Miguel2351
+                                </a>
+                                <a
+                                    className="info"
+                                    href="mailto:miguelhernandezgaitan13@gmail.com"
+                                >
                                     miguelhernandezgaitan13@gmail.com
                                 </a>
                             </div>
@@ -96,39 +106,34 @@ export default function Header() {
                     <ul className="menu">
                         <li className="list-menu" onClick={closeMenu}>
                             <Link href="/">
-                                <a>
-                                    <i className="material-icons">home</i>Inicio
-                                </a>
+                                <i className="material-icons">home</i>Inicio
                             </Link>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
                             <Link href="/projects">
-                                <a>
-                                    <i className="material-icons">build</i>
-                                    Project
-                                </a>
+                                <i className="material-icons">build</i>
+                                Project
                             </Link>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
-                            <a href="https://curso-javascript-miguelhg2351.vercel.app/" target="_blank">
+                            <a
+                                href="https://curso-javascript-miguelhg2351.vercel.app/"
+                                target="_blank"
+                            >
                                 <i className="material-icons">book</i>Blog
                             </a>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
                             <Link href="/about">
-                                <a>
-                                    <i className="material-icons">info</i>About
-                                </a>
+                            <i className="material-icons">info</i>About
                             </Link>
                         </li>
                         <li className="list-menu" onClick={closeMenu}>
                             <Link href="/about">
-                                <a>
-                                    <i className="material-icons">
-                                        perm_contact_calendar
-                                    </i>
-                                    Contact
-                                </a>
+                                <i className="material-icons">
+                                    perm_contact_calendar
+                                </i>
+                                Contact
                             </Link>
                         </li>
                     </ul>
