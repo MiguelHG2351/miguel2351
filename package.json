@@ -6,7 +6,9 @@
   "scripts": {
     "start": "next start",
     "build": "next build",
-    "dev": "next dev"
+    "dev": "next dev",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +22,16 @@
     "react-redux": "^8.0.2",
     "redux-devtools-extension": "^2.13.9",
     "styled-jsx": "^5.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-next": "13.1.6",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2"
   }
 }
