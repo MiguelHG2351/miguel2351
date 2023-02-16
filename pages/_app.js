@@ -2,17 +2,23 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import { useStore } from "redux-config/store";
 import Script from "next/script";
+import { Poppins } from "@next/font/google";
 
 // Component
 import Header from "components/header";
 import Footer from "components/footer";
 
 //globaStyles
-import styles from "styles/global";
+import "../styles/global.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 import * as ga from "lib/ga";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 function MyApp({ Component, pageProps }) {
   const store = useStore(pageProps.initialReduxState);
@@ -66,13 +72,12 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Provider store={store}>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <div className={poppins.className}>
+          <Header />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
       </Provider>
-      <style jsx global>
-        {styles}
-      </style>
     </>
   );
 }

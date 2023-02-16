@@ -1,5 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import { useSelector } from "react-redux";
 import Head from "next/head";
+import Image from "next/image";
+import Script from "next/script";
 
 import Card from "components/Card";
 import Bubble from "components/bubble";
@@ -15,48 +18,77 @@ export default function Index() {
         <title>MiguelHG2351 | Miguel Hernández Gaitan</title>
         <link rel="icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#09f" />
-        <script src="/custom-properties.js" />
+        <meta name="keywords" content="miguelhg2351, Miguel2351" />
       </Head>
-      <main className="container">
-        <section className="description">
-          <section className="hero">
-            <header className="hero__image">
-              <img
-                src="/images/hero_image.png"
-                width="100%"
-                alt="Tecnologías Conocidas"
-              />
-            </header>
-            <article className="hero__content bar-content">
-              <h1>Miguel Hernández</h1>
-              <b>
-                Desarrollo Web con ReactJS | Redux | TailwindCSS | GraphQL |
-                MongoDB
-              </b>
-              <p
-                style={{
-                  margin: "1.25rem",
-                  lineHeight: "1.6",
-                  fontSize: ".80rem",
-                }}
-              >
+      <Script src="/custom-properties.js"></Script>
+      <main className="px-[5%]">
+        <section className="pt-10">
+          <section className="hero md:grid md:grid-cols-2">
+            <article className="hero__content bar-content px-5">
+              <h1 className="font-bold text-[1.75rem]">Miguel Hernández</h1>
+              <div className="subdata my-4">
+                <i className="material-icons subdata__icon">location_on</i>
+                <span className="subdata__city">Managua, Nicaragua</span>
+              </div>
+              <b>FrontEnd Developer en Tecnologías web</b>
+              <p className="text-xs my-4">
                 A lo largo de mi carrera como FrontEnd, he tenido la capacidad
                 de crear proyectos para mejorar mi experiencia como FrontEnd
                 Developer.
               </p>
-              <button className="btn hero__github">
-                <a
-                  className="btn btn-primary"
-                  target="_blank"
-                  href="https://github.com/MiguelHG2351/"
-                  rel="noreferrer"
-                >
-                  Ver GITHUB
-                </a>
-              </button>
+              <a
+                className="bg-primary text-dark py-2 px-4 rounded-md text-sm"
+                target="_blank"
+                href="https://github.com/MiguelHG2351/"
+                rel="noreferrer"
+              >
+                Ver GitHub
+              </a>
+            </article>
+            <article className="hero__header pt-4">
+              <Image
+                src="/images/hero_image.png"
+                className="hero__image"
+                width={720}
+                height={480}
+                priority={true}
+                alt="Tecnologías Conocidas"
+              />
             </article>
           </section>
-          <section className="project-principal bubble-wrapper spacing-container">
+          <section
+            className="flex flex-col md:flex-row py-4"
+            data-section="presentation"
+          >
+            <article className="md:flex-1">
+              <h2 className="text-2xl mb-4 font-bold">Presentación</h2>
+              <p className="text-sm">
+                Durante los últimos 4 años, he estado trabajando constantemente
+                en mejorar mis habilidades como FrontEnd Developer e investigar
+                otras areas de tecnología.
+              </p>
+              <br />
+              <p className="text-sm">
+                A lo largo de mi carrera, he tenido la oportunidad de trabajar
+                en una variedad de proyectos desafiantes y emocionantes, lo que
+                me ha permitido desarrollar una amplia gama de habilidades
+                técnicas y prácticas.
+              </p>
+              <br />
+              <p className="text-sm">
+                Durante mi tiempo como FrontEnd Developer, he trabajado en
+                proyectos de diferentes tamaños y complejidades. Desde pequeñas
+                páginas web hasta aplicaciones web complejas, he tenido la
+                oportunidad de trabajar en proyectos que han requerido
+                habilidades en HTML, CSS, JavaScript y herramientas y marcos de
+                trabajo como React, Next.js, GraphQL y otros.
+              </p>
+            </article>
+            <article className="md:flex-1 text-2xl mb-4 font-bold">
+              <h2>Tecnologias y herramientas</h2>
+            </article>
+          </section>
+          <section className="py-4 project-principal bubble-wrapper spacing-container">
             <h3>
               Estos son algunos de los proyectos principales que he realizado
             </h3>

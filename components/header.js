@@ -101,13 +101,17 @@ export default function Header() {
           <ul className="menu">
             <li className="list-menu" onClick={closeMenu}>
               <Link href="/">
-                <i className="material-icons">home</i>Inicio
+                <div>
+                  <i className="material-icons">home</i>Inicio
+                </div>
               </Link>
             </li>
             <li className="list-menu" onClick={closeMenu}>
               <Link href="/projects">
-                <i className="material-icons">build</i>
-                Project
+                <div>
+                  <i className="material-icons">build</i>
+                  Project
+                </div>
               </Link>
             </li>
             <li className="list-menu" onClick={closeMenu}>
@@ -121,13 +125,17 @@ export default function Header() {
             </li>
             <li className="list-menu" onClick={closeMenu}>
               <Link href="/about">
-                <i className="material-icons">info</i>About
+                <div>
+                  <i className="material-icons">info</i>About
+                </div>
               </Link>
             </li>
             <li className="list-menu" onClick={closeMenu}>
               <Link href="/about">
-                <i className="material-icons">perm_contact_calendar</i>
-                Contact
+                <div>
+                  <i className="material-icons">perm_contact_calendar</i>
+                  Contact
+                </div>
               </Link>
             </li>
           </ul>

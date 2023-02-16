@@ -20,13 +20,13 @@ export default function Card(props) {
             {/* <img src={image} className="responsive-img" alt={alt}/> */}
           </div>
         </div>
-        <style jsx>{styles}</style>
-        <style jsx>{`
-          .background {
-            background-image: url(${props.image});
-          }
-        `}</style>
       </Link>
+      <style jsx>{styles}</style>
+      <style jsx>{`
+        .background {
+          background-image: url(${props.image});
+        }
+      `}</style>
     </>
   );
 }
