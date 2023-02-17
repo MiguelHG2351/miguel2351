@@ -1,4 +1,4 @@
-import css from "styled-jsx/css";
+import css from "styled-jsx/css"
 
 export default css`
   /* .hero {
@@ -227,10 +227,6 @@ export default css`
   }
 
   @media screen and (min-width: 996px) {
-    .hero {
-      gap: 5px 50px;
-    }
-
     .hero__content h1 {
       font-size: 2rem;
     }
@@ -246,4 +242,4 @@ export default css`
       gap: 5px 50px;
     }
   }
-`;
+`
