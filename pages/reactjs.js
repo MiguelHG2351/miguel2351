@@ -1,6 +1,6 @@
-import Head from "next/head";
-import Card from "components/Card";
-import { styles } from "styles/react";
+import Head from "next/head"
+import Card from "components/Card"
+import { styles } from "styles/react"
 
 export default function Reactjs() {
   return (
@@ -67,5 +67,5 @@ export default function Reactjs() {
       </section>
       <style jsx>{styles}</style>
     </>
-  );
+  )
 }

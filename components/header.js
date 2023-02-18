@@ -1,20 +1,20 @@
-import Link from "next/link";
-import { useState, useRef, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import Link from "next/link"
+import { useState, useRef, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
 
-import styles from "components/styles/header";
+import styles from "components/styles/header"
 
 export default function Header() {
   // States hooks
-  const [menu, setMenu] = useState("sidenav");
-  const [themeMenu, setThemeMenu] = useState("options-user");
+  const [menu, setMenu] = useState("sidenav")
+  const [themeMenu, setThemeMenu] = useState("options-user")
 
   // react-redux Hooks
-  const { theme } = useSelector((state) => state);
-  const disptach = useDispatch();
+  const { theme } = useSelector((state) => state)
+  const disptach = useDispatch()
 
   //reference react
-  const overlay = useRef("overlay");
+  const overlay = useRef("overlay")
 
   /* Events */
 
@@ -22,25 +22,25 @@ export default function Header() {
     disptach({
       type: "SET_THEME",
       theme: !theme.theme,
-    });
-    console.log(theme);
+    })
+    console.log(theme)
   }
 
   function openMenu() {
-    overlay.current.classList.add("active");
-    setMenu("sidenav active");
+    overlay.current.classList.add("active")
+    setMenu("sidenav active")
   }
 
   function closeMenu() {
-    overlay.current.classList.remove("active");
-    setMenu("sidenav");
+    overlay.current.classList.remove("active")
+    setMenu("sidenav")
   }
 
   function closeMenuTheme() {
     if (themeMenu === "options-user") {
-      return setThemeMenu("options-user active");
+      return setThemeMenu("options-user active")
     }
-    setThemeMenu("options-user");
+    setThemeMenu("options-user")
   }
 
   // React hooks
@@ -48,9 +48,9 @@ export default function Header() {
     disptach({
       type: "SET_THEME",
       theme: true,
-    });
-    console.log(theme);
-  }, []);
+    })
+    console.log(theme)
+  }, [])
 
   return (
     <header className="header-site">
@@ -144,5 +144,5 @@ export default function Header() {
       <div className="overlay" ref={overlay} onClick={closeMenu}></div>
       <style jsx>{styles}</style>
     </header>
-  );
+  )
 }

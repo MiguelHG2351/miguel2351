@@ -1,5 +1,5 @@
-import Link from "next/link";
-import styles from "./styles/footer";
+import Link from "next/link"
+import styles from "./styles/footer"
 
 export default function Footer() {
   return (
@@ -71,5 +71,5 @@ export default function Footer() {
       </footer>
       <style jsx>{styles}</style>
     </>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import css from "styled-jsx/css";
+import css from "styled-jsx/css"
 
 export default css`
   /* Header site, global  */
@@ -219,4 +219,4 @@ export default css`
   .overlay.active {
     display: block;
   }
-`;
+`

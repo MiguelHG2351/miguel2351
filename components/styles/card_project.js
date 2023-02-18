@@ -1,4 +1,4 @@
-import css from "styled-jsx/css";
+import css from "styled-jsx/css"
 
 export const styles = css`
   .card-link {
@@ -7,4 +7,4 @@ export const styles = css`
     text-decoration: none;
     color: #000;
   }
-`;
+`

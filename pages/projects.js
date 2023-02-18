@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Head from "next/head"
 
 export default function projects() {
   return (
@@ -10,5 +10,5 @@ export default function projects() {
         <p>En construcción</p>
       </div>
     </>
-  );
+  )
 }

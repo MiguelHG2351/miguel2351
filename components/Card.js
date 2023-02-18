@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { styles } from "components/styles/card";
+import Link from "next/link"
+import { styles } from "components/styles/card"
 
 export default function Card(props) {
   return (
@@ -28,5 +28,5 @@ export default function Card(props) {
         }
       `}</style>
     </>
-  );
+  )
 }

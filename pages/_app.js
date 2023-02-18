@@ -1,39 +1,39 @@
-import Head from "next/head";
-import { Provider } from "react-redux";
-import { useStore } from "redux-config/store";
-import Script from "next/script";
-import { Poppins } from "@next/font/google";
+import Head from "next/head"
+import { Provider } from "react-redux"
+import { useStore } from "redux-config/store"
+import Script from "next/script"
+import { Poppins } from "@next/font/google"
 
 // Component
-import Header from "components/header";
-import Footer from "components/footer";
+import Header from "components/header"
+import Footer from "components/footer"
 
 //globaStyles
-import "../styles/global.css";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
+import "../styles/global.css"
+import { useEffect } from "react"
+import { useRouter } from "next/router"
 
-import * as ga from "lib/ga";
+import * as ga from "lib/ga"
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-});
+})
 
 function MyApp({ Component, pageProps }) {
-  const store = useStore(pageProps.initialReduxState);
-  const router = useRouter();
+  const store = useStore(pageProps.initialReduxState)
+  const router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      ga.pageview(url);
-    };
+      ga.pageview(url)
+    }
 
-    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange)
     return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+      router.events.off("routeChangeComplete", handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     <>
@@ -79,7 +79,7 @@ function MyApp({ Component, pageProps }) {
         </div>
       </Provider>
     </>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

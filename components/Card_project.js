@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from "next/link"
 
-import { styles } from "./styles/card_project";
+import { styles } from "./styles/card_project"
 
 export default function Card_project() {
   return (
@@ -28,7 +28,7 @@ export default function Card_project() {
       </Link>
       <style jsx>{styles}</style>
     </>
-  );
+  )
 }
 
 /* usar un before para el reverso de la carta */
