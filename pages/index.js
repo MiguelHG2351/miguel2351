@@ -83,10 +83,9 @@ export default function Index() {
               </p>
               <br />
               <p className="text-sm">
-                Durante mi tiempo como FrontEnd Developer, he trabajado en
-                proyectos de diferentes tamaños y complejidades. Desde pequeñas
-                páginas web hasta aplicaciones web complejas, he tenido la
-                oportunidad de trabajar en proyectos que han requerido
+                He trabajado en proyectos de diferentes tamaños y complejidades.
+                Desde pequeñas páginas web hasta aplicaciones web complejas, con
+                la oportunidad de trabajar en proyectos que han requerido
                 habilidades en HTML, CSS, JavaScript y herramientas y marcos de
                 trabajo como React, Next.js, GraphQL y otros.
               </p>

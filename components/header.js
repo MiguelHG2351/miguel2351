@@ -69,7 +69,7 @@ export default function Header() {
         </div>
         <div className="nav-button">
           <button className="btn" onClick={openMenu}>
-            <i className="material-icons">menu</i>
+            <i className="material-icons align-middle">menu</i>
           </button>
         </div>
 

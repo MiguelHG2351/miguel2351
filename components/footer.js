@@ -6,13 +6,6 @@ export default function Footer() {
     <>
       <footer className="footer">
         <h2>Gracias por Visitar!!</h2>
-        <div className="iframe-container">
-          <iframe
-            title="status profile"
-            src="https://github-readme-stats.vercel.app/api?username=Miguelhg2351&show_icons=true&hide_border=true&title_color=fff&icon_color=ffffff&bg_color=09f&text_color=fff"
-            frameBorder="0"
-          ></iframe>
-        </div>
         <div className="footer-info">
           <ul className="section-footer-container">
             <li className="section-footer-link">
