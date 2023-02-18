@@ -1,10 +1,10 @@
-const runtimeCaching = require('next-pwa/cache')
-const withWPA = require('next-pwa')({
-    dest: 'public',
-    disable: process.env.NODE_ENV === 'development',
-    dest: 'public',
-    register: 'true',
-    runtimeCaching,
+const runtimeCaching = require("next-pwa/cache")
+const withWPA = require("next-pwa")({
+  dest: "public",
+  disable: process.env.NODE_ENV === "development",
+  dest: "public",
+  register: "true",
+  runtimeCaching,
 })
 
 // const settings = {
@@ -18,7 +18,6 @@ const withWPA = require('next-pwa')({
 //     },
 //   };
 
-const pwa = withWPA({
-})
+const pwa = withWPA({})
 
 module.exports = pwa
