@@ -1,4 +1,4 @@
-import { useSelector, shallowEqual } from 'react-redux'
+import { useSelector, shallowEqual } from "react-redux"
 
 const useClock = () => {
   return useSelector(
@@ -18,7 +18,7 @@ const formatTime = (time) => {
 const Clock = () => {
   const { lastUpdate, light } = useClock()
   return (
-    <div className={light ? 'light' : ''}>
+    <div className={light ? "light" : ""}>
       {formatTime(lastUpdate)}
       <style jsx>{`
         div {

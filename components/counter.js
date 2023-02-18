@@ -1,19 +1,19 @@
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from "react-redux"
 
 const useCounter = () => {
   const count = useSelector((state) => state.count)
   const dispatch = useDispatch()
   const increment = () =>
     dispatch({
-      type: 'INCREMENT',
+      type: "INCREMENT",
     })
   const decrement = () =>
     dispatch({
-      type: 'DECREMENT',
+      type: "DECREMENT",
     })
   const reset = () =>
     dispatch({
-      type: 'RESET',
+      type: "RESET",
     })
   return { count, increment, decrement, reset }
 }

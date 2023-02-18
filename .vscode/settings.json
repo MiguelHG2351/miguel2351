@@ -1,0 +1,7 @@
+{
+  "html.completion.attributeDefaultValue": "doublequotes",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
+}

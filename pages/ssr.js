@@ -1,5 +1,5 @@
-import Page from '../components/testing'
-import { initializeStore } from 'redux-config/store'
+import Page from "../components/testing"
+import { initializeStore } from "redux-config/store"
 
 export default function SSR() {
   return <Page />
@@ -13,7 +13,7 @@ export function getServerSideProps() {
   const { dispatch } = reduxStore
 
   dispatch({
-    type: 'TICK',
+    type: "TICK",
     light: false,
     lastUpdate: Date.now(),
   })
