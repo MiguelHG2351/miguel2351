@@ -55,7 +55,7 @@ export default function Header() {
 
   return (
     <header className="header-site bg-primary p-2 shadow-light">
-      <div className="m-auto flex max-w-[1330px] flex-wrap items-center md:w-5/6">
+      <div className="m-auto flex max-w-[1330px] flex-wrap items-center md:w-5/6 md:gap-x-8">
         <div className="name h-min" onClick={closeMenuTheme}>
           <Image
             width={48}
@@ -112,7 +112,7 @@ export default function Header() {
           <ul className="menu flex flex-col md:flex-row md:gap-x-3">
             <li onClick={closeMenu}>
               <Link
-                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
                 href="/"
               >
                 Inicio
@@ -120,7 +120,7 @@ export default function Header() {
             </li>
             <li onClick={closeMenu}>
               <Link
-                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
                 href="/projects"
               >
                 Project
@@ -138,7 +138,7 @@ export default function Header() {
             </li>
             <li onClick={closeMenu}>
               <Link
-                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
                 href="/about"
               >
                 About
@@ -146,7 +146,7 @@ export default function Header() {
             </li>
             <li onClick={closeMenu}>
               <Link
-                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
                 href="/about"
               >
                 Contact

@@ -173,6 +173,7 @@ export default css`
       display: block;
       width: auto;
       background: none;
+      transform: none;
     }
 
     .user {
