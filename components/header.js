@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useRef, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
@@ -53,10 +54,16 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="header-site">
-      <div className="container-header">
-        <div className="name" onClick={closeMenuTheme}>
-          <img src="/images/logo48x48.png" alt="Logo" />
+    <header className="header-site bg-primary p-2 shadow-light">
+      <div className="m-auto flex max-w-[1330px] flex-wrap items-center md:w-5/6">
+        <div className="name h-min" onClick={closeMenuTheme}>
+          <Image
+            width={48}
+            height={48}
+            src="/images/logo48x48.png"
+            className="inline-block rounded-full align-middle"
+            alt="Logo"
+          />
           <div className={themeMenu}>
             <button
               className={`btn-set-mode ${theme ? "dark" : "light"}`}
@@ -67,18 +74,22 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="nav-button">
-          <button className="btn" onClick={openMenu}>
-            <i className="material-icons align-middle">menu</i>
+        <div className="flex flex-grow-[2] items-center justify-end md:hidden">
+          <button
+            className="btn bg-transparent text-base text-white"
+            onClick={openMenu}
+          >
+            <i className="material-icons align-middle text-2xl">menu</i>
           </button>
         </div>
 
-        <div className={menu}>
+        <div className={`${menu} h-full bg-primary md:h-auto`}>
           <div className="user">
             <div className="profile">
               <div className="background"></div>
               <div className="user-info">
                 <div className="avatar">
+                  {/* eslint-disable-next-line @next/next/no-img-element*/}
                   <img
                     src="/images/minecraft.webp"
                     className="responsive-img circle"
@@ -98,44 +109,47 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <ul className="menu">
-            <li className="list-menu" onClick={closeMenu}>
-              <Link href="/">
-                <div>
-                  <i className="material-icons">home</i>Inicio
-                </div>
+          <ul className="menu flex flex-col md:flex-row md:gap-x-3">
+            <li onClick={closeMenu}>
+              <Link
+                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                href="/"
+              >
+                Inicio
               </Link>
             </li>
-            <li className="list-menu" onClick={closeMenu}>
-              <Link href="/projects">
-                <div>
-                  <i className="material-icons">build</i>
-                  Project
-                </div>
+            <li onClick={closeMenu}>
+              <Link
+                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                href="/projects"
+              >
+                Project
               </Link>
             </li>
-            <li className="list-menu" onClick={closeMenu}>
+            <li onClick={closeMenu}>
               <a
+                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
                 href="https://curso-javascript-miguelhg2351.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i className="material-icons">book</i>Blog
+                Blog
               </a>
             </li>
-            <li className="list-menu" onClick={closeMenu}>
-              <Link href="/about">
-                <div>
-                  <i className="material-icons">info</i>About
-                </div>
+            <li onClick={closeMenu}>
+              <Link
+                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                href="/about"
+              >
+                About
               </Link>
             </li>
-            <li className="list-menu" onClick={closeMenu}>
-              <Link href="/about">
-                <div>
-                  <i className="material-icons">perm_contact_calendar</i>
-                  Contact
-                </div>
+            <li onClick={closeMenu}>
+              <Link
+                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
+                href="/about"
+              >
+                Contact
               </Link>
             </li>
           </ul>

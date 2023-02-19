@@ -3,37 +3,6 @@ import css from "styled-jsx/css"
 export default css`
   /* Header site, global  */
 
-  .header-site {
-    box-shadow: var(--shadow-ligth);
-    padding: 8px;
-    background-color: rgb(33 30 43);
-    box-shadow: 0 0 10px 0px #3b557e;
-  }
-
-  .container-header {
-    width: 95%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .nav-button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-grow: 2;
-  }
-
-  .nav-button button {
-    color: #fff;
-    background-color: transparent;
-    font-size: 18px;
-  }
-
-  .nav-button button i {
-    font-size: 1.5em;
-  }
-
   .name {
     position: relative;
     color: #eee;
@@ -127,10 +96,8 @@ export default css`
     right: 0;
     bottom: 0;
     z-index: 10;
-    background-color: #0c1633;
     overflow: hidden;
     transition: transform ease 0.45s, width ease 0.45s;
-    height: 100%;
     width: 0;
     overflow-y: auto;
     transform: translateX(100%);
@@ -178,26 +145,6 @@ export default css`
     width: 30%;
   }
 
-  .list-menu a {
-    padding: 12px 8px;
-    display: flex;
-    transition: all ease 0.25s;
-    align-items: center;
-    color: #fff;
-    font-size: 14px;
-    background-color: #40587c;
-  }
-
-  .list-menu:nth-last-child(-n + 4) {
-    margin-top: 12px;
-  }
-
-  .list-menu a:hover {
-    background: #6200ee;
-    cursor: pointer;
-    color: #fff;
-  }
-
   .list-menu a i {
     margin-right: 12px;
     font-size: 22px;
@@ -218,5 +165,18 @@ export default css`
 
   .overlay.active {
     display: block;
+  }
+
+  @media screen and (min-width: 768px) {
+    .sidenav {
+      position: static;
+      display: block;
+      width: auto;
+      background: none;
+    }
+
+    .user {
+      display: none;
+    }
   }
 `

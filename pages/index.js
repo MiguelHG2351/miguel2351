@@ -13,7 +13,7 @@ import NodejsLogo from "components/icons/NodejsLogo"
 import NextjsLogo from "components/icons/NextjsLogo"
 import GraphQLLogo from "components/icons/GraphQL"
 // #endregion
-import styles from "styles/"
+import styles from "styles/about"
 
 export default function Index() {
   const { projects } = useSelector((state) => state)
@@ -21,7 +21,10 @@ export default function Index() {
   return (
     <>
       <Head>
-        <meta name="description" content="Página principal Miguel2351" />
+        <meta
+          name="description"
+          content="Bienvenido a mi sitio web personal donde encontraras temas de programación y ese tipo de cosas xd"
+        />
         <title>MiguelHG2351 | Miguel Hernández Gaitan</title>
         <link rel="icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#09f" />
