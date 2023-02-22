@@ -20,6 +20,7 @@ import ExpressLogo from "components/icons/ExpressLogo"
 import PlaywrightLogo from "components/icons/PlaywrightLogo"
 // #endregion
 import styles from "styles/about"
+import Link from "next/link"
 
 export default function Index() {
   const { projects } = useSelector((state) => state)
@@ -54,14 +55,20 @@ export default function Index() {
               </p>
             </article>
             <article className="hero__header pt-4">
-              <Image
-                src="/images/hero_image.png"
-                className="hero__image md:h-44 md:w-auto"
-                width={720}
-                height={480}
-                priority={true}
-                alt="Tecnologías Conocidas"
-              />
+              <h2 className="text-2xl font-bold">Última cosa que he hecho</h2>
+              <Link
+                href="/blog/aws-amplify-1"
+                className="mt-4 flex flex-col items-center gap-y-2 no-underline transition-transform hover:translate-y-4"
+              >
+                <Image
+                  alt="Mi última publicación esta relacionada con el uso de un servicio de AWS por que me dio curiosidad y quise aprender algo de AWS"
+                  src="/images/blog/latest.png"
+                  width={384}
+                  priority={true}
+                  height={216}
+                />
+                <p className="text-center">Aprendiendo un poco de AWS :D</p>
+              </Link>
             </article>
           </section>
           <section
