@@ -115,7 +115,7 @@ export default function Header() {
                 className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
                 href="/"
               >
-                Inicio
+                Home
               </Link>
             </li>
             <li onClick={closeMenu}>
@@ -145,12 +145,12 @@ export default function Header() {
               </Link>
             </li>
             <li onClick={closeMenu}>
-              <Link
+              <a
                 className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
-                href="/about"
+                href="mailto:miguelhgaitan2351@gmail.com"
               >
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
         </div>

@@ -12,6 +12,12 @@ import ReactLogo from "components/icons/ReactLogo"
 import NodejsLogo from "components/icons/NodejsLogo"
 import NextjsLogo from "components/icons/NextjsLogo"
 import GraphQLLogo from "components/icons/GraphQL"
+import PythonLogo from "components/icons/PythonLogo"
+import ReduxLogo from "components/icons/ReduxLogo"
+import NestLogo from "components/icons/NestLogo"
+import ApolloLogo from "components/icons/ApolloLogo"
+import ExpressLogo from "components/icons/ExpressLogo"
+import PlaywrightLogo from "components/icons/PlaywrightLogo"
 // #endregion
 import styles from "styles/about"
 
@@ -46,19 +52,11 @@ export default function Index() {
                 de crear proyectos para mejorar mi experiencia como FrontEnd
                 Developer.
               </p>
-              <a
-                className="rounded-md bg-primary py-2 px-4 text-sm text-dark"
-                target="_blank"
-                href="https://github.com/MiguelHG2351/"
-                rel="noreferrer"
-              >
-                Ver GitHub
-              </a>
             </article>
             <article className="hero__header pt-4">
               <Image
                 src="/images/hero_image.png"
-                className="hero__image"
+                className="hero__image md:h-44 md:w-auto"
                 width={720}
                 height={480}
                 priority={true}
@@ -94,24 +92,54 @@ export default function Index() {
               </p>
             </article>
             <article className="text-2xl font-bold md:flex-1">
-              <h2>Tecnologias y herramientas</h2>
-              <ul className="flex flex-wrap items-center justify-around py-4">
-                <li title="HTML, CSS y JavaScript">
-                  <WebTech className="shrink-0" width={48} height={48} />
-                </li>
-                <li title="React.js">
-                  <ReactLogo className="shrink-0" height={48} />
-                </li>
-                <li title="Nodejs">
-                  <NodejsLogo className="shrink-0" height={48} />
-                </li>
-                <li title="GraphQL">
-                  <GraphQLLogo className="shrink-0" height={48} />
-                </li>
-                <li title="Next.js">
-                  <NextjsLogo className="shrink-0" height={48} />
-                </li>
-              </ul>
+              <div className="web-techs">
+                <h2>Front-End Developer</h2>
+                <ul className="flex flex-wrap items-center justify-around py-4">
+                  <li title="HTML, CSS y JavaScript">
+                    <WebTech className="shrink-0" width={48} height={48} />
+                  </li>
+                  <li title="React.js">
+                    <ReactLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="GraphQL">
+                    <GraphQLLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Next.js">
+                    <NextjsLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Redux">
+                    <ReduxLogo className="shrink-0" height={48} />
+                  </li>
+                </ul>
+              </div>
+              <div className="testing">
+                <h2>Testing</h2>
+                <ul className="flex flex-wrap items-center justify-start py-4">
+                  <li title="playwright">
+                    <PlaywrightLogo className="shrink-0" height={48} />
+                  </li>
+                </ul>
+              </div>
+              <div className="testing">
+                <h2>Backend</h2>
+                <ul className="flex flex-wrap items-center justify-around py-4">
+                  <li title="Nodejs">
+                    <NodejsLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Python con Flask y Django">
+                    <PythonLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Apollo">
+                    <ApolloLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Express">
+                    <ExpressLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Nestjs">
+                    <NestLogo className="shrink-0" height={48} />
+                  </li>
+                </ul>
+              </div>
             </article>
           </section>
           <section>
