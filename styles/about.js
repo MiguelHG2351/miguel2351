@@ -21,7 +21,6 @@ export default css`
   }
 
   .hero__content {
-    text-align: center;
     color: var(--color-dark-mode);
   }
 
@@ -33,51 +32,6 @@ export default css`
     --primary-color: #d87211;
     --secondary-color: #e91e63;
     --tertiary-color: #9c27b0;
-  }
-
-  .bar-content::before {
-    content: "";
-    position: absolute;
-    left: 0px;
-    top: 0;
-    bottom: 0;
-    width: 0.25rem;
-    background-image: linear-gradient(
-      to bottom,
-      var(--primary-color),
-      var(--secondary-color),
-      var(--tertiary-color)
-    );
-    transition: background 0.2s ease-in;
-    animation-name: changeGradient;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    background-repeat: no-repeat;
-    animation-fill-mode: both;
-  }
-
-  .bar-content::after {
-    content: "";
-    position: absolute;
-    left: unset;
-    right: 0px;
-    top: 0;
-    bottom: 0;
-    width: 0.25rem;
-    background-image: linear-gradient(
-      to bottom,
-      var(--tertiary-color),
-      var(--secondary-color),
-      var(--primary-color)
-    );
-    transition: background 0.2s ease-in;
-    animation-name: changeGradient;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-    animation-iteration-count: infinite;
-    background-repeat: no-repeat;
-    animation-fill-mode: both;
   }
 
   .subdata {
@@ -92,28 +46,6 @@ export default css`
   .subdata__city {
     vertical-align: middle;
     display: inline-block;
-  }
-
-  @keyframes changeGradient {
-    0% {
-      --primary-color: #d87211;
-      --primary-color: #e91e63;
-      --primary-color: #9c27b0;
-      /* background-image: var(--primary-color); */
-    }
-
-    60% {
-      --primary-color: #9c27b0;
-      --primary-color: #e91e63;
-      --primary-color: #d87211;
-    }
-
-    100% {
-      --primary-color: #d87211;
-      --primary-color: #e91e63;
-      --primary-color: #9c27b0;
-      /* background-image: var(--primary-color); */
-    }
   }
 
   @keyframes fade-in {

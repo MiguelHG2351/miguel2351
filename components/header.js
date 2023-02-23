@@ -123,7 +123,7 @@ export default function Header() {
                 className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
                 href="/projects"
               >
-                Project
+                Projects
               </Link>
             </li>
             <li onClick={closeMenu}>

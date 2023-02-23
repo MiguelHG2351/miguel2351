@@ -2,7 +2,6 @@
 import { useSelector } from "react-redux"
 import Head from "next/head"
 import Image from "next/image"
-import Script from "next/script"
 
 import Card from "components/Card"
 import Bubble from "components/bubble"
@@ -17,7 +16,11 @@ import ReduxLogo from "components/icons/ReduxLogo"
 import NestLogo from "components/icons/NestLogo"
 import ApolloLogo from "components/icons/ApolloLogo"
 import ExpressLogo from "components/icons/ExpressLogo"
+import FirebaseLogo from "components/icons/FirebaseLogo"
+import FigmaLogo from "components/icons/FigmaLogo"
 import PlaywrightLogo from "components/icons/PlaywrightLogo"
+import GitLogo from "components/icons/GitLogo"
+import MySQLLogo from "components/icons/MySQLLogo"
 // #endregion
 import styles from "styles/about"
 import Link from "next/link"
@@ -37,21 +40,22 @@ export default function Index() {
         <meta name="theme-color" content="#09f" />
         <meta name="keywords" content="miguelhg2351, Miguel2351" />
       </Head>
-      <Script src="/custom-properties.js"></Script>
       <main className="px-[5%]">
         <section className="pt-10">
           <section className="hero md:grid md:grid-cols-2 md:gap-x-12">
-            <article className="hero__content bar-content px-5">
+            <article className="hero__content bar-content text-left">
               <h1 className="text-[1.75rem] font-bold">Miguel Hernández</h1>
               <div className="subdata my-4">
                 <i className="material-icons subdata__icon">location_on</i>
                 <span className="subdata__city">Managua, Nicaragua</span>
               </div>
-              <b>FrontEnd Developer en Tecnologías web</b>
-              <p className="my-4 text-xs">
-                A lo largo de mi carrera como FrontEnd, he tenido la capacidad
-                de crear proyectos para mejorar mi experiencia como FrontEnd
-                Developer.
+              <b>Software Developer</b>
+              <p>Edad: 18 años</p>
+              <p className="my-4">
+                Mi nombre es Miguel Hernández, soy un desarrollador de software
+                que le gusta desarrollar aplicaciones web, APIs, aprender sobre
+                data science y otras cosas que tenga que ver con la
+                programación.s
               </p>
             </article>
             <article className="hero__header pt-4">
@@ -97,6 +101,19 @@ export default function Index() {
                 habilidades en HTML, CSS, JavaScript y herramientas y marcos de
                 trabajo como React, Next.js, GraphQL y otros.
               </p>
+              <section className="mt-4">
+                <h2 className="text-2xl font-bold">Idiomas</h2>
+                <div className="grid grid-cols-[auto_max-content] py-4 md:inline-grid md:w-[80%]">
+                  <span className="left-grid-line relative after:left-[7ch] after:right-[1ch]">
+                    Español
+                  </span>
+                  <span>Nativo</span>
+                  <span className="left-grid-line relative after:left-[6ch] after:right-[1ch] after:bg-red-500">
+                    Ingles
+                  </span>
+                  <span>A2</span>
+                </div>
+              </section>
             </article>
             <article className="text-2xl font-bold md:flex-1">
               <div className="web-techs">
@@ -127,7 +144,7 @@ export default function Index() {
                   </li>
                 </ul>
               </div>
-              <div className="testing">
+              <div className="backend">
                 <h2>Backend</h2>
                 <ul className="flex flex-wrap items-center justify-around py-4">
                   <li title="Nodejs">
@@ -145,22 +162,26 @@ export default function Index() {
                   <li title="Nestjs">
                     <NestLogo className="shrink-0" height={48} />
                   </li>
+                  <li title="MySQL">
+                    <MySQLLogo className="shrink-0" height={48} />
+                  </li>
+                </ul>
+              </div>
+              <div className="tools">
+                <h2>Herramientas</h2>
+                <ul className="flex flex-wrap items-center justify-around py-4">
+                  <li title="Git">
+                    <GitLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Firebase">
+                    <FirebaseLogo className="shrink-0" height={48} />
+                  </li>
+                  <li title="Figma">
+                    <FigmaLogo className="shrink-0" height={48} />
+                  </li>
                 </ul>
               </div>
             </article>
-          </section>
-          <section>
-            <h2 className="text-2xl font-bold">Idiomas</h2>
-            <div className="grid grid-cols-2 py-4 md:inline-grid md:w-[50%]">
-              <span className="left-grid-line relative after:left-[7ch] after:right-[1ch]">
-                Español
-              </span>
-              <span>Nativo</span>
-              <span className="left-grid-line relative after:left-[6ch] after:right-[1ch] after:bg-red-500">
-                Ingles
-              </span>
-              <span>A2</span>
-            </div>
           </section>
           <section>
             <h2 className="text-2xl font-bold">Certificados</h2>
