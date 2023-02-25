@@ -109,7 +109,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <ul className="menu flex flex-col items-baseline md:flex-row md:gap-x-3">
+          <ul className="menu flex flex-col items-stretch md:flex-row md:items-baseline md:gap-x-3">
             <li onClick={closeMenu}>
               <Link
                 className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
