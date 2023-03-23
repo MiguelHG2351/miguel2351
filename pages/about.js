@@ -33,12 +33,12 @@ export default function Index() {
       <Head>
         <meta
           name="description"
-          content="Bienvenido a mi sitio web personal donde encontraras temas de programación y ese tipo de cosas xd"
+          content="Quien soy? Soy un desarrollador de software que le gusta desarrollar aplicaciones web, APIs, aprender sobre data science y otras cosas que tenga que ver con la programación."
         />
         <title>MiguelHG2351 | Miguel Hernández Gaitan</title>
         <link rel="icon" href="/images/favicon.ico" />
         <meta name="theme-color" content="#09f" />
-        <meta name="keywords" content="miguelhg2351, Miguel2351" />
+        <meta name="keywords" content="About, Portfolio" />
       </Head>
       <main className="px-[5%]">
         <section className="pt-10">

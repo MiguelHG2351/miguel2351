@@ -32,6 +32,24 @@ body {
 
 @layer components {
   .left-grid-line {
-    @apply after:absolute after:top-1/2 after:right-[1ch] after:inline-block after:h-1 after:-translate-y-[50%] after:transform after:bg-red-600 after:text-base
+    @apply after:absolute after:top-1/2 after:right-[1ch] after:inline-block after:h-1 after:-translate-y-[50%] after:transform after:bg-red-600 after:text-base;
+  }
+
+  .reflex {
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
+  }
+
+  .bezel {
+    --background-1: cyan;
+    --background-2: #006aff;
+    --bezel-radius: 20px 0 20px 0;
+    --bezel-border-color: #5266df;
+    color: #fff;
+    padding: 18px 28px;
+    border-radius: 8px;
+    transition: transform 0.17s ease-in-out;
+    -webkit-mask-image: paint(bezel);
+    background-image: paint(bezel);
+    background-color: red;
   }
 }

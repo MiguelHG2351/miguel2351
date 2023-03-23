@@ -74,7 +74,9 @@ function MyApp({ Component, pageProps }) {
       <Provider store={store}>
         <div className={poppins.className}>
           <Header />
-          <Component {...pageProps} />
+          <div className="pb-4">
+            <Component {...pageProps} />
+          </div>
           <Footer />
         </div>
       </Provider>
