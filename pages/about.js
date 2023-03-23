@@ -55,7 +55,7 @@ export default function Index() {
                 Mi nombre es Miguel Hernández, soy un desarrollador de software
                 que le gusta desarrollar aplicaciones web, APIs, aprender sobre
                 data science y otras cosas que tenga que ver con la
-                programación.s
+                programación.
               </p>
             </article>
             <article className="hero__header pt-4">
