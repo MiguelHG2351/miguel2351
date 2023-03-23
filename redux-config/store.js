@@ -20,10 +20,10 @@ let projects = [
     url: "https://task-hero.vercel.app/",
     github: "https://github.com/MiguelHG2351/Task-Hero",
     description:
-      "Aplicación web presentada para terminar el curso de Web50xNI que es un manejador de tareas basado en workspaces.",
-    image1x: "/images/pokedex.png",
-    image2x: "/images/pokedex.png",
-    image3x: "/images/pokedex.png",
+      "Aplicación web presentada para terminar el curso de Web50xNI. Es un manejador de tareas donde cada workspaces tiene una serie de proyectos y cada proyecto tareas e información única.",
+    image1x: "/images/task-hero.png",
+    image2x: "/images/task-hero.png",
+    image3x: "/images/task-hero.png",
   },
   {
     name: "Pokedex React Native",

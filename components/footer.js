@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-indigo-900 py-2 px-4 md:flex md:items-center md:justify-between md:py-8">
-        <p>&copy;Copyright 2023</p>
+        <p>Miguel Hernández &copy;Copyright 2023</p>
         <div className="mt-4 flex items-center gap-x-4 md:mt-0">
           <a href="https://twitter.com/MiguelHG2351/">
             <svg

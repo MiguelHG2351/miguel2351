@@ -185,11 +185,11 @@ export default function Index() {
           </section>
           <section>
             <h2 className="text-2xl font-bold">Certificados</h2>
-            <div className="grid grid-cols-4">
+            <div className="md:grid md:grid-cols-3 md:items-center md:justify-center">
               <a
                 target="_blank"
                 href="https://www.credly.com/badges/a08234e3-6f21-41a1-a27f-5dc7e4835662?source=linked_in_profile"
-                className="underline-none inline-block shrink-0"
+                className="underline-none inline-flex shrink-0 justify-center"
                 rel="noreferrer"
               >
                 <Image
@@ -197,6 +197,32 @@ export default function Index() {
                   height={340}
                   src="/images/certificados/azure.png"
                   alt="Certificación en AZ-900"
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://platzi.com/p/Miguel2351/ruta/100-escuela-javascript/diploma/detalle/"
+                className="underline-none inline-flex shrink-0 justify-center"
+                rel="noreferrer"
+              >
+                <Image
+                  width={340}
+                  height={340}
+                  src="/images/certificados/platzi.png"
+                  alt="Certificación en FullStack Developer con JavaScript"
+                />
+              </a>
+              <a
+                target="_blank"
+                href="https://platzi.com/p/Miguel2351/ruta/100-escuela-javascript/diploma/detalle/"
+                className="underline-none inline-flex shrink-0 justify-center"
+                rel="noreferrer"
+              >
+                <Image
+                  width={340}
+                  height={340}
+                  src="/images/certificados/cs50.png"
+                  alt="Certificación en Computer science CS50xNI"
                 />
               </a>
             </div>
