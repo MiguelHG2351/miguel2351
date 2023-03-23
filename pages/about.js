@@ -214,7 +214,7 @@ export default function Index() {
               </a>
               <a
                 target="_blank"
-                href="https://platzi.com/p/Miguel2351/ruta/100-escuela-javascript/diploma/detalle/"
+                href="https://certificates.cs50.io/9be2b278-4d0d-45e5-804a-4aa8805450c0.pdf?size=letter"
                 className="underline-none inline-flex shrink-0 justify-center"
                 rel="noreferrer"
               >
