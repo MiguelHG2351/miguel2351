@@ -1,10 +1,50 @@
-import { useMemo } from "react";
-import { createStore, applyMiddleware } from "redux";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { useMemo } from "react"
+import { createStore, applyMiddleware } from "redux"
+import { composeWithDevTools } from "redux-devtools-extension"
 
-let store;
+let store
 
 let projects = [
+  {
+    name: "FrontEnd Mentor",
+    url: "https://www.frontendmentor.io/profile/MiguelHG2351/solutions",
+    github: "https://www.frontendmentor.io/profile/MiguelHG2351/solutions",
+    description:
+      "Retos resueltos de la plataforma FrontEndMentor, que incluyen landing pages y páginas con interacciones complejas o uso de API's.",
+    image1x: "/images/frontendMentor.png",
+    image2x: "/images/frontendMentor.png",
+    image3x: "/images/frontendMentor.png",
+  },
+  {
+    name: "Task Hero",
+    url: "https://task-hero.vercel.app/",
+    github: "https://github.com/MiguelHG2351/Task-Hero",
+    description:
+      "Aplicación web presentada para terminar el curso de Web50xNI que es un manejador de tareas basado en workspaces.",
+    image1x: "/images/pokedex.png",
+    image2x: "/images/pokedex.png",
+    image3x: "/images/pokedex.png",
+  },
+  {
+    name: "Pokedex React Native",
+    url: "https://github.com/MiguelHG2351/react-native-pokedex",
+    github: "https://github.com/MiguelHG2351/react-native-pokedex",
+    description:
+      "Una aplicación sencilla en React Native que simula ser una pokedex, de momento esta pausado porque no tengo extensión USB para debuggear con el móvil xd.",
+    image1x: "/images/pokedex.png",
+    image2x: "/images/pokedex.png",
+    image3x: "/images/pokedex.png",
+  },
+  {
+    name: "100 days of css",
+    url: "http://github.miguel2351.me/100-days-css/",
+    github: "https://github.com/MiguelHG2351/100-days-css",
+    description:
+      "En este proyecto almacene los distintos retos que resolvi de la página de 100daysofcss.",
+    image1x: "/images/onehundreddays.png",
+    image2x: "/images/onehundreddays.png",
+    image3x: "/images/onehundreddays.png",
+  },
   {
     name: "Nicsmart",
     url: "https://nicsmart.vercel.app/",
@@ -16,7 +56,7 @@ let projects = [
     image3x: "/images/nicsmart3x.png",
   },
   {
-    name: "qonexia",
+    name: "qonexia (no oficial)",
     url: "https://qonexia-react.vercel.app/",
     github: "https://github.com/MiguelHG2351/qonexia-CRA",
     description:
@@ -65,7 +105,7 @@ let projects = [
     image2x: "/images/redaccion2x.png",
     image3x: "/images/redaccion3x.png",
   },
-];
+]
 
 const initialState = {
   lastUpdate: 0,
@@ -73,7 +113,7 @@ const initialState = {
   count: 0,
   theme: null,
   projects,
-};
+}
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -82,42 +122,42 @@ const reducer = (state = initialState, action) => {
         ...state,
         lastUpdate: action.lastUpdate,
         light: !!action.light,
-      };
+      }
     case "INCREMENT":
       return {
         ...state,
         count: state.count + 1,
-      };
+      }
     case "DECREMENT":
       return {
         ...state,
         count: state.count - 1,
-      };
+      }
     case "RESET":
       return {
         ...state,
         count: initialState.count,
-      };
+      }
     case "SET_THEME":
       return {
         ...state,
         theme: action.theme,
-      };
+      }
     default:
-      return state;
+      return state
   }
-};
+}
 
 function initStore(preloadedState = initialState) {
   return createStore(
     reducer,
     preloadedState,
     composeWithDevTools(applyMiddleware())
-  );
+  )
 }
 
 export const initializeStore = (preloadedState) => {
-  let _store = store ?? initStore(preloadedState);
+  let _store = store ?? initStore(preloadedState)
 
   // After navigating to a page with an initial Redux state, merge that state
   // with the current state in the store, and create a new store
@@ -125,20 +165,20 @@ export const initializeStore = (preloadedState) => {
     _store = initStore({
       ...store.getState(),
       ...preloadedState,
-    });
+    })
     // Reset the current store
-    store = undefined;
+    store = undefined
   }
 
   // For SSG and SSR always create a new store
-  if (typeof window === "undefined") return _store;
+  if (typeof window === "undefined") return _store
   // Create the store once in the client
-  if (!store) store = _store;
+  if (!store) store = _store
 
-  return _store;
-};
+  return _store
+}
 
 export function useStore(initialState) {
-  const store = useMemo(() => initializeStore(initialState), [initialState]);
-  return store;
+  const store = useMemo(() => initializeStore(initialState), [initialState])
+  return store
 }

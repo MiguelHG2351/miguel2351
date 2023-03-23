@@ -2,10 +2,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState, useRef, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
+import { useRouter } from "next/router"
 
 import styles from "components/styles/header"
 
 export default function Header() {
+  const router = useRouter()
+
   // States hooks
   const [menu, setMenu] = useState("sidenav")
   const [themeMenu, setThemeMenu] = useState("options-user")
@@ -38,10 +41,11 @@ export default function Header() {
   }
 
   function closeMenuTheme() {
-    if (themeMenu === "options-user") {
-      return setThemeMenu("options-user active")
-    }
-    setThemeMenu("options-user")
+    router.push("/")
+    // if (themeMenu === "options-user") {
+    //   return setThemeMenu("options-user active")
+    // }
+    // setThemeMenu("options-user")
   }
 
   // React hooks
@@ -61,7 +65,7 @@ export default function Header() {
             width={48}
             height={48}
             src="/images/logo48x48.png"
-            className="inline-block rounded-full align-middle"
+            className=" inline-block cursor-pointer rounded-full align-middle"
             alt="Logo"
           />
           <div className={themeMenu}>

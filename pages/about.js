@@ -3,7 +3,7 @@ import { useSelector } from "react-redux"
 import Head from "next/head"
 import Image from "next/image"
 
-import Card from "components/Card"
+// import Card from "components/Card"
 import Bubble from "components/bubble"
 // #region Icons
 import WebTech from "components/icons/WebTech"
@@ -270,7 +270,7 @@ export default function Index() {
               ))}
             </article>
           </section>
-          <article className="project-all">
+          {/* <article className="project-all">
             <Card
               proyect="ReactJS"
               technologies="ReactJS, NodeJS, MongoDB, Firebase"
@@ -295,7 +295,7 @@ export default function Index() {
               url="/graphql/"
               color="secondary"
             />
-          </article>
+          </article> */}
         </section>
       </main>
       <style jsx>{styles}</style>
