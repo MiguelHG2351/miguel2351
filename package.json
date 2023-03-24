@@ -25,6 +25,7 @@
     "styled-jsx": "^5.1.2"
   },
   "devDependencies": {
+    "@tailwindcss/line-clamp": "^0.4.2",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.34.0",
     "eslint-config-next": "^13.1.6",

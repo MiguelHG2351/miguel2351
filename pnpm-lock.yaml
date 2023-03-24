@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@next/font': ^13.1.6
   '@reduxjs/toolkit': ^1.9.2
+  '@tailwindcss/line-clamp': ^0.4.2
   autoprefixer: ^10.4.13
   eslint: ^8.34.0
   eslint-config-next: ^13.1.6
@@ -32,6 +33,7 @@ dependencies:
   styled-jsx: 5.1.2_react@18.2.0
 
 devDependencies:
+  '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.7
   autoprefixer: 10.4.13_postcss@8.4.21
   eslint: 8.34.0
   eslint-config-next: 13.1.6_eslint@8.34.0
@@ -1542,6 +1544,14 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: false
+
+  /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.7:
+    resolution: {integrity: sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==}
+    peerDependencies:
+      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
+    dependencies:
+      tailwindcss: 3.2.7_postcss@8.4.21
+    dev: true
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}

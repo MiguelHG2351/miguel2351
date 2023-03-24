@@ -104,11 +104,8 @@ export default function Header() {
                 <a className="info" href="https://github.com/MiguelHG2351">
                   Miguel2351
                 </a>
-                <a
-                  className="info"
-                  href="mailto:miguelhernandezgaitan13@gmail.com"
-                >
-                  miguelhernandezgaitan13@gmail.com
+                <a className="info" href="mailto:miguelhgaitan2351@gmail.com">
+                  miguelhgaitan2351@gmail.com
                 </a>
               </div>
             </div>
@@ -131,14 +128,14 @@ export default function Header() {
               </Link>
             </li>
             <li onClick={closeMenu}>
-              <a
-                className="inline-block w-full py-3 px-2 hover:rounded-md hover:bg-indigo-600"
-                href="https://curso-javascript-miguelhg2351.vercel.app/"
+              <Link
+                className="inline-block w-full py-3 px-2 text-sm hover:rounded-md hover:bg-indigo-600"
+                href="/blog"
                 target="_blank"
                 rel="noreferrer"
               >
                 Blog
-              </a>
+              </Link>
             </li>
             <li onClick={closeMenu}>
               <Link

@@ -2,7 +2,7 @@ import Head from "next/head"
 import { Provider } from "react-redux"
 import { useStore } from "redux-config/store"
 import Script from "next/script"
-import { Poppins } from "@next/font/google"
+import { Roboto as NextFont } from "@next/font/google"
 
 // Component
 import Header from "components/header"
@@ -15,9 +15,9 @@ import { useRouter } from "next/router"
 
 import * as ga from "lib/ga"
 
-const poppins = Poppins({
+const font = NextFont({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "700"],
 })
 
 function MyApp({ Component, pageProps }) {
@@ -72,7 +72,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Provider store={store}>
-        <div className={poppins.className}>
+        <div className={font.className}>
           <Header />
           <div className="pb-4">
             <Component {...pageProps} />

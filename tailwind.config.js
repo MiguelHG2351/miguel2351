@@ -17,7 +17,11 @@ module.exports = {
       boxShadow: {
         light: "0 0 10px 0px #3b557e",
       },
+      backgroundImage: () => ({
+        "card-gradient":
+          "linear-gradient(180deg, rgb(0, 0, 0) 27.25%, rgba(0, 0, 0, 0) 116.67%)",
+      }),
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 }
