@@ -64,7 +64,7 @@ export default function Index() {
                 href="/blog/aws-amplify-1"
                 className="mt-4 flex flex-col items-center gap-y-2 no-underline transition-transform hover:translate-y-4"
               >
-                <Image
+                <img
                   alt="Mi última publicación esta relacionada con el uso de un servicio de AWS por que me dio curiosidad y quise aprender algo de AWS"
                   src="/images/blog/latest.png"
                   width={384}
