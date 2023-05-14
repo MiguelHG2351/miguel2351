@@ -3,6 +3,7 @@ import { Provider } from "react-redux"
 import { useStore } from "redux-config/store"
 import Script from "next/script"
 import { Roboto as NextFont } from "@next/font/google"
+import { Analytics } from "@vercel/analytics/react"
 
 // Component
 import Header from "components/header"
@@ -80,6 +81,7 @@ function MyApp({ Component, pageProps }) {
           <Footer />
         </div>
       </Provider>
+      <Analytics />
     </>
   )
 }
