@@ -15,13 +15,14 @@
   "license": "ISC",
   "dependencies": {
     "@next/font": "^13.1.6",
+    "@redux-devtools/extension": "^3.2.5",
     "@reduxjs/toolkit": "^1.9.2",
+    "@vercel/analytics": "^1.0.1",
     "next": "^13.1.6",
     "next-axiom": "^0.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "redux-devtools-extension": "^2.13.9",
     "styled-jsx": "^5.1.2"
   },
   "devDependencies": {
