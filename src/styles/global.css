@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-brand: #0099ff;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-white text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200;
+    color-scheme: light dark;
+  }
+}

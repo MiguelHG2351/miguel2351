@@ -1,0 +1,20 @@
+---
+import type { IconName } from "../data/site"
+
+interface Props {
+  name: IconName
+  size?: number
+  class?: string
+}
+
+const icons = import.meta.glob<{ default: (props: Record<string, unknown>) => unknown }>(
+  "../assets/icons/*.svg",
+  { eager: true },
+)
+
+const { name, size = 40, class: className } = Astro.props
+const Svg = icons[`../assets/icons/${name}.svg`]?.default
+if (!Svg) throw new Error(`Icono no encontrado: ${name}`)
+---
+
+<Svg height={size} class={className} aria-hidden="true" />

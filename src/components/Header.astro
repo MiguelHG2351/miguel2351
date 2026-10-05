@@ -1,0 +1,27 @@
+---
+import { nav, site } from "../data/site"
+
+const path = Astro.url.pathname
+const isActive = (href: string) => (href === "/" ? path === "/" : path.startsWith(href))
+---
+
+<header class="border-b border-zinc-200 dark:border-zinc-800">
+  <nav class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-4">
+    <a href="/" class="font-bold tracking-tight">{site.handle}</a>
+    <ul class="flex gap-5 text-sm">
+      {
+        nav.map(({ label, href }) => (
+          <li>
+            <a
+              href={href}
+              aria-current={isActive(href) ? "page" : undefined}
+              class="hover:text-brand aria-[current=page]:text-brand transition-colors"
+            >
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

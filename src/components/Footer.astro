@@ -1,0 +1,22 @@
+---
+import { site, socials } from "../data/site"
+---
+
+<footer class="border-t border-zinc-200 dark:border-zinc-800">
+  <div
+    class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-6 text-sm text-zinc-500"
+  >
+    <p>&copy; {new Date().getFullYear()} {site.name}</p>
+    <ul class="flex gap-4">
+      {
+        socials.map(({ label, href }) => (
+          <li>
+            <a href={href} target="_blank" rel="noopener" class="hover:text-brand">
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>
