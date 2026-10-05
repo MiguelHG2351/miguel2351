@@ -1,0 +1,26 @@
+---
+title: Hola de nuevo
+description: Post de ejemplo para probar MDX. Está en draft, así que solo se ve con `pnpm dev`.
+date: 2026-10-04
+tags: [meta]
+draft: true
+---
+
+Este es un post de ejemplo escrito en **MDX**. Puedes usar Markdown normal:
+
+- listas
+- [enlaces](https://astro.build)
+- `código en línea`
+
+```ts
+const saludo = "Hola, mundo"
+console.log(saludo)
+```
+
+Y también importar componentes de Astro dentro del post:
+
+import Icon from "../../components/Icon.astro"
+
+<Icon name="react" size={48} />
+
+Para publicarlo, cambia `draft: true` por `draft: false`.

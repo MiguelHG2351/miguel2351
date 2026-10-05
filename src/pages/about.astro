@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets"
+
+import Layout from "../layouts/Layout.astro"
+import Icon from "../components/Icon.astro"
+import { certificates, languages, site, skills } from "../data/site"
+---
+
+<Layout title="Sobre mí" description="Quién soy, con qué tecnologías trabajo y mis certificaciones.">
+  <section>
+    <h1 class="text-3xl font-bold tracking-tight">Sobre mí</h1>
+    <p class="mt-1 text-zinc-500">{site.role} · {site.location}</p>
+    <!-- TODO: actualizar con la experiencia actual -->
+    <div class="mt-6 max-w-prose space-y-4 text-zinc-700 dark:text-zinc-300">
+      <p>
+        Soy desarrollador de software. Me gusta construir aplicaciones web y APIs, y aprender sobre
+        data science y todo lo que tenga que ver con la programación.
+      </p>
+      <p>
+        He trabajado en proyectos de distintos tamaños, desde páginas sencillas hasta aplicaciones
+        web complejas, usando HTML, CSS, JavaScript y herramientas como React, Next.js y GraphQL.
+      </p>
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold">Tecnologías</h2>
+    <div class="mt-6 grid gap-8 sm:grid-cols-2">
+      {
+        skills.map(({ group, items }) => (
+          <div>
+            <h3 class="mb-3 font-semibold text-zinc-500">{group}</h3>
+            <ul class="flex flex-wrap gap-4">
+              {items.map(({ name, icon }) => (
+                <li title={name} class="flex size-14 items-center justify-center">
+                  <Icon name={icon} size={40} />
+                  <span class="sr-only">{name}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold">Idiomas</h2>
+    <dl class="mt-4 grid max-w-xs grid-cols-2 gap-y-2">
+      {
+        languages.map(({ name, level }) => (
+          <>
+            <dt>{name}</dt>
+            <dd class="text-zinc-500">{level}</dd>
+          </>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold">Certificados</h2>
+    <ul class="mt-6 grid gap-6 sm:grid-cols-3">
+      {
+        certificates.map(({ title, href, image }) => (
+          <li>
+            <a href={href} target="_blank" rel="noopener" class="group block text-center">
+              <Image src={image} alt="" width={240} class="mx-auto transition-transform group-hover:-translate-y-1" />
+              <span class="group-hover:text-brand mt-2 block text-sm">{title}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

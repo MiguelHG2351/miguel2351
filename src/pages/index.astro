@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ProjectCard from "../components/ProjectCard.astro"
+import PostList from "../components/PostList.astro"
+import { site } from "../data/site"
+import { getPosts, getProjects } from "../lib/content"
+
+const featured = (await getProjects()).filter((p) => p.data.featured)
+const latestPosts = (await getPosts()).slice(0, 3)
+---
+
+<Layout>
+  <section class="py-10 md:py-16">
+    <p class="text-brand font-medium">{site.role} · {site.location}</p>
+    <h1 class="mt-2 text-4xl font-bold tracking-tight md:text-5xl">Hola, soy {site.name}.</h1>
+    <p class="mt-5 max-w-prose text-lg text-zinc-600 dark:text-zinc-400">
+      Desarrollo aplicaciones web y APIs. Aquí comparto los proyectos en los que he trabajado y lo
+      que voy aprendiendo.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/projects" class="bg-brand rounded-lg px-5 py-2.5 font-medium text-white hover:opacity-90">
+        Ver proyectos
+      </a>
+      <a
+        href="/about"
+        class="rounded-lg border border-zinc-300 px-5 py-2.5 font-medium hover:border-zinc-400 dark:border-zinc-700"
+      >
+        Sobre mí
+      </a>
+    </div>
+  </section>
+
+  <section class="py-8">
+    <div class="mb-6 flex items-baseline justify-between">
+      <h2 class="text-2xl font-bold">Proyectos destacados</h2>
+      <a href="/projects" class="text-brand text-sm hover:underline">Ver todos →</a>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      {featured.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <section class="py-8">
+    <div class="mb-2 flex items-baseline justify-between">
+      <h2 class="text-2xl font-bold">Blog</h2>
+      <a href="/blog" class="text-brand text-sm hover:underline">Ver todo →</a>
+    </div>
+    <PostList posts={latestPosts} />
+  </section>
+</Layout>

@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets"
+import type { CollectionEntry } from "astro:content"
+
+import Layout from "./Layout.astro"
+import FormattedDate from "../components/FormattedDate.astro"
+
+interface Props {
+  post: CollectionEntry<"blog">
+}
+
+const { post } = Astro.props
+const { title, description, date, updated, cover } = post.data
+---
+
+<Layout title={title} description={description}>
+  <article class="mx-auto max-w-prose">
+    <header class="mb-8">
+      <p class="text-sm text-zinc-500">
+        <FormattedDate date={date} />
+        {updated && <span> · actualizado <FormattedDate date={updated} /></span>}
+      </p>
+      <h1 class="mt-2 text-3xl font-bold tracking-tight md:text-4xl">{title}</h1>
+      <p class="mt-3 text-lg text-zinc-600 dark:text-zinc-400">{description}</p>
+    </header>
+    {cover && <Image src={cover} alt="" class="mb-8 rounded-lg" />}
+    <div class="prose prose-zinc dark:prose-invert prose-a:text-brand">
+      <slot />
+    </div>
+  </article>
+</Layout>
